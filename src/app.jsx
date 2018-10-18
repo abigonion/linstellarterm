@@ -106,8 +106,8 @@ class TermApp extends React.Component {
           <div className="so-back">
             <OpenUp />
             <div className="HomePage__lead">
-              <h2 className="HomePage__lead__title">Trade on the <a href="#exchange">Stellar Decentralized Exchange</a></h2>
-              <p className="HomePage__lead__summary">StellarTerm is an <a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">open source</a> client for the <a href="https://www.stellar.org/" target="_blank" rel="nofollow noopener noreferrer">Stellar network</a>. <br />Send, receive, and <a href="#exchange">trade</a> assets on the Stellar network easily with StellarTerm.</p>
+              <h2 className="HomePage__lead__title">这目前还是一个测试系统 <a href="#exchange">-关于stellar</a></h2>
+              <p className="HomePage__lead__summary">我们要打造<a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">中国版</a> stellar <a href="https://www.stellar.org/" target="_blank" rel="nofollow noopener noreferrer"> network</a>. <br />Send, receive, and <a href="#exchange">trade</a> assets on the Stellar network easily.</p>
               {this.renderHomePageActions()}
             </div>
           </div>
