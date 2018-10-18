@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 const mountNode = document.getElementById('app');
 import GlobalModal from './components/GlobalModal.jsx';
 import NotFound from './components/NotFound.jsx';
-import AssetList from './components/AssetList.jsx';
+//import AssetList from './components/AssetList.jsx';
 //import Markets from './components/Markets.jsx';
 import Session from './components/Session.jsx';
 //import Exchange from './components/Exchange.jsx';
@@ -112,14 +112,14 @@ class TermApp extends React.Component {
             </div>
           </div>
         </div>
-        <div className="so-back islandBack HomePage__assetList">
+     {/*<div className="so-back islandBack HomePage__assetList">
           <div className="island">
             <AssetList d={this.props.d} limit={6}></AssetList>
             <div className="AssetListFooter">
               View more assets on the <a href="#markets">market list page</a>.
             </div>
           </div>
-        </div>
+        </div>  */}
         <div className="so-back islandBack">
           <div className="island">
             <div className="island__sub">
