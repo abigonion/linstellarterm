@@ -13,7 +13,7 @@ export default class OpenUp extends React.Component {
     return <div className="OpenUp">
     <div className="OpenUp__inside">
 
-      <H2>Thank you all for your support. Exciting times ahead!</H2>
+      <h2>Thank you all for your support. Exciting times ahead!</h2>
     </div></div>
   }
 };
