@@ -119,7 +119,7 @@ class TermApp extends React.Component {
               View more assets on the <a href="#markets">market list page</a>.
             </div>
           </div>
-        </div>  */}
+        </div> 
         <div className="so-back islandBack">
           <div className="island">
             <div className="island__sub">
@@ -137,7 +137,7 @@ class TermApp extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     } else if (urlParts[0] === 'download') {
       body = <Download />
