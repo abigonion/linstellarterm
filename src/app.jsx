@@ -102,7 +102,7 @@ class TermApp extends React.Component {
     if (url === '') {
       // Home page
       body = <div>
-   {/*  <div className="HomePage__black">
+     <div className="HomePage__black">
           <div className="so-back">
             <OpenUp />
             <div className="HomePage__lead">
@@ -112,7 +112,7 @@ class TermApp extends React.Component {
             </div>
           </div>
         </div>
-     <div className="so-back islandBack HomePage__assetList">
+   {/*  <div className="so-back islandBack HomePage__assetList">
           <div className="island">
             <AssetList d={this.props.d} limit={6}></AssetList>
             <div className="AssetListFooter">
