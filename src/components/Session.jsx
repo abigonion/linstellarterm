@@ -64,12 +64,12 @@ class Session extends React.Component {
         }
         return <div>
           <Generic>
-            <h2 className="Session__welcomeTitle">Welcome to StellarTerm!</h2>
+            <h2 className="Session__welcomeTitle">Welcome to Stellar!</h2>
             <p>Please make sure you have keys securely backed up. Never share your secret key or recovery phrase with anyone.</p>
             <div className="Generic__divider"></div>
             <div className="Session__inflation">
               <br />
-              By pressing "Accept and Continue", your account will vote for the StellarTerm inflation account. Thank you for your support!{currentVoteNote}
+              By pressing "Accept and Continue". Thank you for your support!{currentVoteNote}
               <div className="Session__inflation__next">
                 <a className="Session__inflation__next__noThanks" onClick={d.session.handlers.noThanks}>No thanks</a>
                 <button className="s-button" onClick={d.session.handlers.voteContinue}>Accept and Continue</button>
