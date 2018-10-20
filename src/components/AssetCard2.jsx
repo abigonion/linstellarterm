@@ -30,7 +30,7 @@ export default class AssetCard2 extends React.Component {
     }
 
     let asset = {};
-    if (this.props.code === 'TLM' && this.props.domain === undefined && this.props.issuer === undefined) {
+    if (this.props.code === 'XLM' && this.props.domain === undefined && this.props.issuer === undefined) {
       asset = directory.nativeAsset;
     } else {
       if (this.props.domain !== undefined) {
