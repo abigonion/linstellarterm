@@ -25,13 +25,13 @@ function DirectoryBuilder() {
 
   // Special anchors aren't really anchors at all!
   this.nativeAnchor = {
-    name: 'Tellar Network',
+    name: 'Stellar Network',
     website: 'https://www.stellar.org/lumens/',
     logo: logos['stellar'],
     color: '#08b5e5',
   };
   this.nativeAsset = {
-    code: 'TLM',
+    code: 'XLM',
     issuer: null,
     domain: 'native',
   };
