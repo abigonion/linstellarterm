@@ -1676,16 +1676,16 @@
         "issuer": null
       }
     },
-    "SLT-smartlands.io/XLM-native": {
-      "baseBuying": {
-        "code": "SLT",
-        "issuer": "GCKA6K5PCQ6PNF5RQBF7PQDJWRHO6UOGFMRLK3DYHDOI244V47XKQ4GP"
-      },
-      "counterSelling": {
-        "code": "XLM",
-        "issuer": null
-      }
-    },
+    // "SLT-smartlands.io/XLM-native": {
+    //   "baseBuying": {
+    //     "code": "SLT",
+    //     "issuer": "GCKA6K5PCQ6PNF5RQBF7PQDJWRHO6UOGFMRLK3DYHDOI244V47XKQ4GP"
+    //   },
+    //   "counterSelling": {
+    //     "code": "XLM",
+    //     "issuer": null
+    //   }
+    // },
     "REPO-repocoin.io/XLM-native": {
       "baseBuying": {
         "code": "REPO",
