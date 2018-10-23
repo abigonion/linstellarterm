@@ -62,10 +62,10 @@ export default class AddTrustFromFederation extends React.Component {
 
     return <div className="island">
       <div className="island__header">
-        Accept asset via anchor domain
+        通过锚定域接受资产
       </div>
       <div className="island__paddedContent">
-        <p>You can accept an asset by entering the domain name of the issuer.</p>
+        <p>您可以通过输入发行人的域名来接受资产。</p>
         <label className="s-inputGroup AddTrust__inputGroup">
           <span className="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4">
             <span>Anchor Domain</span>

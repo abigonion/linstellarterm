@@ -27,7 +27,7 @@ export default class ManageCurrentTrust extends React.Component {
     if (rows.length === 0) {
       rows.push(<tr className="BalancesTable__row" key={0}>
         <td className="BalancesTable__row__none" colSpan="2">
-          You currently don't accept any assets.
+          您目前不接受任何资产
         </td>
       </tr>)
     }
@@ -37,7 +37,7 @@ export default class ManageCurrentTrust extends React.Component {
         Assets you accept
       </div>
       <div className="island__paddedContent">
-        To receive assets on the Stellar network, you must first "accept" the asset.
+        要在Stellar网络上接收资产，您必须先“接受”资产。
       </div>
       <div className="island__separator"></div>
       <table className="ManageCurrentTrust">

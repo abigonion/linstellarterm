@@ -32,10 +32,10 @@ export default class AddTrustFromDirectory extends React.Component {
     })
     return <div className="island">
       <div className="island__header">
-        Accept more assets
+        接受更多资产
       </div>
       <div className="island__paddedContent">
-        <p>This is a list of anchors from the Stellar community.<br />Note: StellarTerm does not endorse any of these anchors.</p>
+        <p>这是来自Stellar社区的锚点列表。<br />注意：我们官方不支持​​任何这些锚点。</p>
       </div>
       <div className="AddTrustFromDirectory">
         {rows}
