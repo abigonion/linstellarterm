@@ -20,7 +20,19 @@ directory.DirectoryBuilder = DirectoryBuilder;
 //   issuer: 'Ga_issuer_account_id',
 // });
 
-
+directory.addAnchor({
+   domain: 'cowrie.exchange',
+   website: 'https://cowrie.exchange',
+   logo: 'cowrie.exchange',
+   color: '#2a1c4a',
+   displayName: 'Cowrie Exchange',
+});
+directory.addAsset('cowrie.exchange', {
+   code: 'NGNT',
+   issuer: 'GAWODAROMJ33V5YDFY3NPYTHVYQG7MJXVJ2ND3AOGIHYRWINES6ACCPD',
+   instructions: 'https://cowrie.exchange',
+   type: 'token',
+});
 // Pairs involving "fiat" assets
 // "Fiat" asset should be counterSelling
 directory.addPair({
