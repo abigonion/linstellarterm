@@ -888,10 +888,10 @@ directory.addPair({
   baseBuying: ['XIR', 'xirkle.com'],
   counterSelling: ['XLM', 'native'],
 });
-// directory.addPair({
-//   baseBuying: ['SLT', 'smartlands.io'],
-//   counterSelling: ['XLM', 'native'],
-// });
+directory.addPair({
+  baseBuying: ['SLT', 'smartlands.io'],
+  counterSelling: ['XLM', 'native'],
+});
 directory.addPair({
   baseBuying: ['REPO', 'repocoin.io'],
   counterSelling: ['XLM', 'native'],
