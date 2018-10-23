@@ -162,19 +162,19 @@ directory.addAsset('superlumen.org', {
   type: 'token',
 });
 
-directory.addAnchor({
-  domain: 'smartlands.io',
-  website: 'https://smartlands.io',
-  logo: 'smartlands.io',
-  color: '#35AB62',
-  displayName: 'Smartlands',
-});
-directory.addAsset('smartlands.io', {
-  code: 'SLT',
-  issuer: 'GCKA6K5PCQ6PNF5RQBF7PQDJWRHO6UOGFMRLK3DYHDOI244V47XKQ4GP',
-  instructions: 'https://smartlands.io',
-  type: 'token',
-});
+// directory.addAnchor({
+//   domain: 'smartlands.io',
+//   website: 'https://smartlands.io',
+//   logo: 'smartlands.io',
+//   color: '#35AB62',
+//   displayName: 'Smartlands',
+// });
+// directory.addAsset('smartlands.io', {
+//   code: 'SLT',
+//   issuer: 'GCKA6K5PCQ6PNF5RQBF7PQDJWRHO6UOGFMRLK3DYHDOI244V47XKQ4GP',
+//   instructions: 'https://smartlands.io',
+//   type: 'token',
+// });
 
 directory.addAnchor({
   domain: 'old.repocoin.io',
