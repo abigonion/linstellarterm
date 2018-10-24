@@ -42,11 +42,11 @@ export default class DepositAnchors extends React.Component {
         <p>This is a list of anchors from the Stellar community.<br/>
         Note: StellarTerm does not endorse any of these anchors.</p>
       </div>
- {/*  <table className="row__full_width">
+    <table className="row__full_width">
         <tbody>
           {rows}
         </tbody>
-      </table>*/}
+      </table>
     </div>);  
   }
 }
