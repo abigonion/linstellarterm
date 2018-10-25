@@ -105,10 +105,10 @@ export default class ManuallyAddTrust extends React.Component {
 
     return <div className="island">
       <div className="island__header">
-        Manually accept asset
+       手动接受资产
       </div>
       <div className="island__paddedContent">
-        <p>You can accept an asset if you know the issuer account ID and asset code.</p>
+        <p>如果您知道发行人帐户ID和资产代码，则可以接受资产。</p>
         <label className="s-inputGroup AddTrust__inputGroup">
           <span className="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4">
             <span>Asset Code</span>

@@ -114,7 +114,7 @@ export default class LoginPage extends React.Component {
 
     let acceptTerms = <label className="s-inputGroup LoginPage__accept">
         <input className="LoginPage__accept__checkbox" type="checkbox" checked={this.state.termsAccepted} onClick={() => this.setState({termsAccepted: !this.state.termsAccepted})} />
-        <span className="LoginPage__accept__label">I accept the <a href="#terms-of-use" className="LoginPage__accept__link">Terms of Use</a>, understand the risks associated with cryptocurrencies, and know that StellarTerm does not issue or endorse any asset on the Stellar network.</span>
+        <span className="LoginPage__accept__label">我接受 <a href="#terms-of-use" className="LoginPage__accept__link">使用条款</a> ，了解与加密货币相关的风险.</span>
       </label>
 
     let body;
@@ -123,7 +123,7 @@ export default class LoginPage extends React.Component {
       body = <div className="LoginPage__body">
         <div className="LoginPage__greenBox">
           <div className="LoginPage__form">
-            <p className="LoginPage__intro">Log in with your secret key to manage your account.</p>
+            <p className="LoginPage__intro">使用您的密钥登录以管理您的帐户。</p>
             <form onSubmit={this.handleSubmit}>
               <label className="s-inputGroup LoginPage__inputGroup">
                 <input type={inputType} className="s-inputGroup__item S-flexItem-share LoginPage__password" value={this.state.secretInput} onChange={this.handleInput} placeholder="Secret key (example: SBSMVCIWBL3HDB7N4EI3QKBKI4D5ZDSSDF7TMPB.....)" />
@@ -139,12 +139,11 @@ export default class LoginPage extends React.Component {
             </form>
           </div>
           <div className="LoginPage__notes">
-            <h3>Security notes</h3>
+            <h3>安全说明</h3>
             <ul>
-              <li>Check the url to make sure you are on the correct website.</li>
-              <li>Stellarterm does not save your secret key. It is stored on your browser and will be deleted once the page is refreshed or exited.</li>
-              <li>For extra security, you can <a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">build from source</a> or <a href="https://github.com/stellarterm/stellarterm.github.io/" target="_blank" rel="nofollow noopener noreferrer">download from GitHub</a> and verify the hash.</li>
-              <li>StellarTerm is released under the Apache 2.0. It is provided "AS IS" without warranty. The developer is not responsible for any losses and activities caused by the application.</li>
+              <li>检查网址，确保您在正确的网站上。</li>
+              <li>Tellar不会保存您的密钥。它存储在您的浏览器中，并在刷新或退出页面后删除。</li>
+              <li>Tellar是在Apache 2.0开源协议下发布的。它“按原样”提供，不提供保修。开发人员不对应用程序造成的任何损失和活动负责。</li>
             </ul>
           </div>
         </div>
@@ -154,19 +153,19 @@ export default class LoginPage extends React.Component {
 
         <div className="LoginPage__greenBox">
           <div className="LoginPage__form">
-            <h3>Create Account Keypair</h3>
-            <p>To get started on using the Stellar network, you must first create a keypair (unless you have a Ledger Nano). The keypair consists of two parts:</p>
+            <h3>创建帐户密钥对</h3>
+            <p>要开始使用Stellar网络，您必须首先创建一个密钥对（除非您有Ledger Nano）。密钥对由两部分组成：</p>
             <ul className="LoginPage__form__list">
-              <li><strong>Public key</strong>: The public key is used to identify the account. It is also known as an account. This public key is used for receiving funds.</li>
-              <li><strong>Secret key</strong>: The secret key is used to access your account and make transactions. Keep this code safe and secure. Anyone with the code will have full access to the account and funds. If you lose the key, you will no longer be able to access the funds and there is no recovery mechanism.</li>
+              <li><strong>公 钥</strong>:公钥用于标识帐户。它也被称为帐户。该公钥用于接收资金。</li>
+              <li><strong>私 钥</strong>:密钥用于访问您的帐户并进行交易。保持此代码的安全。拥有该代码的任何人都可以完全访问该帐户和资金。如果您丢失了密钥，您将无法再访问资金，也没有恢复机制。</li>
             </ul>
             {acceptTerms}
             <input type="submit" className="LoginPage__generate s-button" onClick={this.handleGenerate} value="Generate keypair" disabled={!this.state.termsAccepted}></input>
             {newKeypairDetails}
           </div>
           <div className="LoginPage__notes">
-            <h3>Account generation security notes</h3>
-            <p>The key is generated using entropy from <a href="https://github.com/dchest/tweetnacl-js#random-bytes-generation">TweetNaCl's randomByte function</a> which, in most browsers, uses getRandomValues from the <a href="https://w3c.github.io/webcrypto/Overview.html">Web Cryptography API</a>. However, using a secure random number generation does not protect you from a compromised computer. Take great care to make sure your computer is secure and do not run this on a computer you do not trust.</p>
+            <h3>帐户生成安全说明</h3>
+            <p>密钥是使用来自<a href="https://github.com/dchest/tweetnacl-js#random-bytes-generation">TweetNaCl's randomByte function</a> 函数的熵生成的，该函数在大多数浏览器中使用来自<a href="https://w3c.github.io/webcrypto/Overview.html">WWeb Cryptography API</a>的getRandomValues。但是，使用<a href="https://github.com/dchest/tweetnacl-js#random-bytes-generation">安全随机数</a>生成并不能保护您免受受感染的计算机的侵害。请务必小心确保您的计算机是安全的，不要在不信任的计算机上运行。</p>
           </div>
         </div>
       </div>
@@ -280,15 +279,15 @@ export default class LoginPage extends React.Component {
     return <div className="so-back islandBack islandBack--t">
       <div className="island">
         <div className="island__header">
-          Access your account
+          访问您的帐户
         </div>
         <div className="LoginPage">
           <div className="LoginPage__sidebar">
             <a className={'LoginPage__sidebar__tab' + (this.props.urlParts[0] === 'signup' ? ' is-active' : '')} href="#signup">
-              New account
+             新建账号
             </a>
             <a className={'LoginPage__sidebar__tab' + (this.props.urlParts[0] === 'account' ? ' is-active' : '')} href="#account">
-              Log in with key
+             通过私钥登录
             </a>
             {/*<a className={'LoginPage__sidebar__tab' + (this.props.urlParts[0] === 'ledger' ? ' is-active' : '')} href="#ledger">*/}
               {/*<img className="LoginPage__sidebar__tab__img--invertible img--noSelect" src={images['ledger-logo']} alt="Ledger" width="75" height="20" />*/}
