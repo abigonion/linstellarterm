@@ -51,9 +51,9 @@ DirectoryBuilder.prototype.addAnchor = function(details) {
   if (this.anchors[details.domain] !== undefined) {
     throw new Error('Duplicate anchor in directory: ' + details.domain);
   }
-  if (logos[details.logo] === undefined) {
-    throw new Error('Missing logo file: ' + details.logo);
-  }
+  // if (logos[details.logo] === undefined) {
+  //   throw new Error('Missing logo file: ' + details.logo);
+  // }
   if (details.website.indexOf('http://') !== -1) {
     throw new Error('Website URL must use https://');
   }

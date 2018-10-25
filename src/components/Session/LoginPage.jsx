@@ -290,9 +290,9 @@ export default class LoginPage extends React.Component {
             <a className={'LoginPage__sidebar__tab' + (this.props.urlParts[0] === 'account' ? ' is-active' : '')} href="#account">
               Log in with key
             </a>
-            <a className={'LoginPage__sidebar__tab' + (this.props.urlParts[0] === 'ledger' ? ' is-active' : '')} href="#ledger">
-              <img className="LoginPage__sidebar__tab__img--invertible img--noSelect" src={images['ledger-logo']} alt="Ledger" width="75" height="20" />
-            </a>
+            {/*<a className={'LoginPage__sidebar__tab' + (this.props.urlParts[0] === 'ledger' ? ' is-active' : '')} href="#ledger">*/}
+              {/*<img className="LoginPage__sidebar__tab__img--invertible img--noSelect" src={images['ledger-logo']} alt="Ledger" width="75" height="20" />*/}
+            {/*</a>*/}
           </div>
           {body}
         </div>

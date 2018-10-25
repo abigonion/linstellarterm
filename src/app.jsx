@@ -3,10 +3,10 @@ const ReactDOM = require('react-dom');
 const mountNode = document.getElementById('app');
 import GlobalModal from './components/GlobalModal.jsx';
 import NotFound from './components/NotFound.jsx';
-//import AssetList from './components/AssetList.jsx';
-//import Markets from './components/Markets.jsx';
+import AssetList from './components/AssetList.jsx';
+import Markets from './components/Markets.jsx';
 import Session from './components/Session.jsx';
-//import Exchange from './components/Exchange.jsx';
+import Exchange from './components/Exchange.jsx';
 import Generic from './components/Generic.jsx';
 //import Download from './components/Download.jsx';
 import Loading from './components/Loading.jsx';
@@ -112,14 +112,14 @@ class TermApp extends React.Component {
             </div>
           </div>
         </div>
-   {/*  <div className="so-back islandBack HomePage__assetList">
+     <div className="so-back islandBack HomePage__assetList">
           <div className="island">
             <AssetList d={this.props.d} limit={6}></AssetList>
             <div className="AssetListFooter">
               View more assets on the <a href="#markets">market list page</a>.
             </div>
           </div>
-        </div> 
+        </div>
         <div className="so-back islandBack">
           <div className="island">
             <div className="island__sub">
@@ -137,7 +137,7 @@ class TermApp extends React.Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     } else if (urlParts[0] === 'download') {
       body = <Download />
@@ -198,7 +198,7 @@ class TermApp extends React.Component {
           body = <Generic title="Loading orderbook">Loading</Generic>
         } else {
           // Default to a market with good activity
-          let baseBuying = new StellarSdk.Asset('MOBI', 'GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH');
+          let baseBuying = new StellarSdk.Asset('HUG', 'GDNPYCB3GV4CFJA437YTXGZSPNF2RGEYTAHLLVQGNFJUTVYXAMCN3SHL');
           let counterSelling = StellarSdk.Asset.native();
 
           this.d.orderbook.handlers.setOrderbook(baseBuying, counterSelling);
@@ -222,7 +222,7 @@ class TermApp extends React.Component {
           <Header d={this.props.d} urlParts={urlParts} network={network}></Header>
           {body}
         </div>
-     {/* <Footer />   */}   
+     {/* <Footer />   */}
       </div>
     </div>;
 
