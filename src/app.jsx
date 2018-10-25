@@ -106,8 +106,8 @@ class TermApp extends React.Component {
           <div className="so-back">
             <OpenUp />
             <div className="HomePage__lead">
-              <h2 className="HomePage__lead__title">这目前还是一个测试系统 <a href="#exchange">-关于stellar</a></h2>
-              <p className="HomePage__lead__summary">我们要打造<a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">中国版</a> stellar <a href="https://www.stellar.org/" target="_blank" rel="nofollow noopener noreferrer"> network</a>. <br />Send, receive, and <a href="#exchange">trade</a> assets on the Stellar network easily.</p>
+              <h2 className="HomePage__lead__title">这目前还是一个测试系统 <a href="#exchange">-关于Tellar</a></h2>
+              <p className="HomePage__lead__summary">我们要打造<a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">中国版</a> stellar <a href="https://www.stellar.org/" target="_blank" rel="nofollow noopener noreferrer"> network</a>. <br />发送, 接收, 和 <a href="#exchange">交易</a> 资产在Tellar network.</p>
               {this.renderHomePageActions()}
             </div>
           </div>
@@ -120,24 +120,24 @@ class TermApp extends React.Component {
             </div>
           </div>
         </div>
-        <div className="so-back islandBack">
-          <div className="island">
-            <div className="island__sub">
-              <div className="island__sub__division">
-                <div className="HomePage__sideBlurb">
-                  <p>StellarTerm is just a client that can be used to access the Stellar Decentralized Exchange. Neither StellarTerm nor the developers of it are involved with operating the Stellar network.</p>
-                  <p>StellarTerm is developed by Ultra Stellar, LLC, the same company that developed the LOBSTR wallet. The project is independent of the Stellar Development Foundation.</p>
-                </div>
-              </div>
-              <div className="island__sub__division">
-                <div className="HomePage__sideBlurb">
-                  <p>StellarTerm is open source software. To support the project, please <a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">star the project on GitHub</a>.</p>
-                  <p>The project is released under the Apache-2.0 license and is released as is without warranty.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/*<div className="so-back islandBack">*/}
+          {/*<div className="island">*/}
+            {/*<div className="island__sub">*/}
+              {/*<div className="island__sub__division">*/}
+                {/*<div className="HomePage__sideBlurb">*/}
+                  {/*<p>StellarTerm is just a client that can be used to access the Stellar Decentralized Exchange. Neither StellarTerm nor the developers of it are involved with operating the Stellar network.</p>*/}
+                  {/*<p>StellarTerm is developed by Ultra Stellar, LLC, the same company that developed the LOBSTR wallet. The project is independent of the Stellar Development Foundation.</p>*/}
+                {/*</div>*/}
+              {/*</div>*/}
+              {/*<div className="island__sub__division">*/}
+                {/*<div className="HomePage__sideBlurb">*/}
+                  {/*<p>StellarTerm is open source software. To support the project, please <a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">star the project on GitHub</a>.</p>*/}
+                  {/*<p>The project is released under the Apache-2.0 license and is released as is without warranty.</p>*/}
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</div>*/}
+          {/*</div>*/}
+        {/*</div>*/}
       </div>
     } else if (urlParts[0] === 'download') {
       body = <Download />
