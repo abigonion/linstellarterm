@@ -18,7 +18,7 @@ export default class AccountView extends React.Component {
             Balances
           </div>
           <div className="Session__AccountView__content">
-            By default, your account is only configured to accept <strong>XLM</strong>. In order to receive other assets, you must <a href="#account/addTrust">accept</a> them using the <strong>Accept assets</strong> tool.
+            默认情况下，您的帐户仅配置为接受 <strong>XLM</strong>. 要接收其他资产，您必须使用<a href="#account/addTrust">信任</a>的<strong>信任资产</strong> 工具.
           </div>
           <BalancesTable d={this.props.d}></BalancesTable>
         </div>

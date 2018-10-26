@@ -88,13 +88,13 @@ class Session extends React.Component {
               <p className="Sesssion__yourId__title">Your Wallet Account ID</p>
               <strong className="clickToSelect Sesssion__yourId__accountId" onClick={clickToSelect}>{this.props.d.session.account.accountId()}</strong>
             </div>
-            <p>To receive payments, share your account ID with them (begins with a G).</p>
+            <p>要接收付款，请与他们分享您的帐户ID（以G开头）。</p>
           </Generic>
           <Generic noTopPadding>
-            <h2>Where is the money stored?</h2>
-            <p>In the Stellar network, funds exist on the network and can only be moved by whoever has the secret key. This means that your secret key is extremely sensitive, and whoever has access to it can move the funds. However, money is <strong>NOT</strong> actually <em>"inside"</em> StellarTerm. StellarTerm is just a helpful tool that helps you use your secret key to make transactions.</p>
+            <h2>存钱在哪里？</h2>
+            <p>在Tellar网络中，资金存在于网络上，只能由拥有密钥的人员移动。这意味着您的密钥非常敏感，任何有权访问它的人都可以移动资金。然而，钱实际上并不是在Tellar。 Tellar只是一个有用的工具，可以帮助您使用密钥进行交易。</p>
 
-            <p><strong>WARNING</strong>: Be extremely careful with your secret key and do not share it with anybody.</p>
+            <p><strong>警告</strong>: 小心你的私钥，不要与任何人分享。</p>
           </Generic>
           <AccountView d={d}></AccountView>
         </ErrorBoundary>
@@ -136,10 +136,10 @@ class Session extends React.Component {
           <div className="so-back subNavBack">
             <div className="so-chunk subNav">
               <nav className="subNav__nav">
-                <a className={'subNav__nav__item' + (window.location.hash === '#account' ? ' is-current' : '')} href="#account"><span>Balances</span></a>
-                <a className={'subNav__nav__item' + (window.location.hash === '#account/send' ? ' is-current' : '')} href="#account/send"><span>Send</span></a>
-                <a className={'subNav__nav__item' + (window.location.hash === '#account/addTrust' ? ' is-current' : '')} href="#account/addTrust"><span>Accept assets</span></a>
-                <a className={'subNav__nav__item' + (window.location.hash === '#account/history' ? ' is-current' : '')} href="#account/history"><span>History</span></a> 
+                <a className={'subNav__nav__item' + (window.location.hash === '#account' ? ' is-current' : '')} href="#account"><span>余额</span></a>
+                <a className={'subNav__nav__item' + (window.location.hash === '#account/send' ? ' is-current' : '')} href="#account/send"><span>发送</span></a>
+                <a className={'subNav__nav__item' + (window.location.hash === '#account/addTrust' ? ' is-current' : '')} href="#account/addTrust"><span>接收资产</span></a>
+                <a className={'subNav__nav__item' + (window.location.hash === '#account/history' ? ' is-current' : '')} href="#account/history"><span>历史</span></a>
                 {/*<a className={'subNav__nav__item' + (window.location.hash === '#account/settings' ? ' is-current' : '')} href="#account/settings"><span>Settings</span></a>*/}
                 {/*<a className="subNav__nav__item" href="#account/deposit">Deposit</a>*/}
               </nav>
