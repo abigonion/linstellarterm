@@ -111,8 +111,8 @@ export default function Send(driver) {
         this.authType = opts.authType;
 
         let inflationDoneDestinations = {
-          'GDCHDRSDOBRMSUDKRE2C4U4KDLNEATJPIHHR2ORFL5BSD56G4DQXL4VW': true,
-          'GCCD6AJOYZCUAQLX32ZJF2MKFFAUJ53PVCFQI3RHWKL3V47QYE2BNAUT': true,
+          'GCTI6HMWRH2QGMFKWVU5M5ZSOTKL7P7JAHZDMJJBKDHGWTEC4CJ7O3DU': true,
+          'GBZXN7PIRZGNMHGA7MUUUF4GWPY5AYPV6LY4UV2GL6VJGIQRXFDNMADI': true,
         };
 
         if (inflationDoneDestinations[this.account.inflation_destination]) {
@@ -145,9 +145,9 @@ export default function Send(driver) {
     // The reason this doesn't take in a TransactionBuilder so we can call build() here is that there
     // are cases when we want to paste in a raw transaction and sign that
     sign: async (tx) => {
-      if (this.account.inflation_destination === 'GDCHDRSDOBRMSUDKRE2C4U4KDLNEATJPIHHR2ORFL5BSD56G4DQXL4VW') {
+      if (this.account.inflation_destination === 'GCTI6HMWRH2QGMFKWVU5M5ZSOTKL7P7JAHZDMJJBKDHGWTEC4CJ7O3DU') {
         console.log('Signing tx\nhash:', tx.hash().toString('hex'),'\nsequence: ' + tx.sequence, '\n\n' + tx.toEnvelope().toXDR('base64'))
-        console.log('https://www.stellar.org/laboratory/#txsigner?xdr=' + encodeURIComponent(tx.toEnvelope().toXDR('base64')) + '&network=public');
+        console.log('https://www.stellar.org/laboratory/#txsigner?xdr=' + encodeURIComponent(tx.toEnvelope().toXDR('base64')) + '&network=custom&horizonURL=https%3A%2F%2Fsudo38.com&networkPassphrase=Standalone%20Network%20%3B%20February%202017');
       }
       if (this.authType === 'secret') {
         this.account.signWithSecret(tx);
@@ -229,7 +229,7 @@ export default function Send(driver) {
       return await this.handlers.buildSignSubmit(txBuilder);
     },
     voteContinue: async () => {
-      let bssResult = await this.handlers.setInflation('GDCHDRSDOBRMSUDKRE2C4U4KDLNEATJPIHHR2ORFL5BSD56G4DQXL4VW');
+      let bssResult = await this.handlers.setInflation('GCTI6HMWRH2QGMFKWVU5M5ZSOTKL7P7JAHZDMJJBKDHGWTEC4CJ7O3DU');
       if (bssResult.status === 'finish') {
         this.inflationDone = true;
         this.event.trigger();

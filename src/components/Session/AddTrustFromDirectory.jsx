@@ -37,9 +37,9 @@ export default class AddTrustFromDirectory extends React.Component {
       <div className="island__paddedContent">
         <p>这是来自Stellar社区的锚点列表。<br />注意：我们官方不支持​​任何这些锚点。</p>
       </div>
-      <div className="AddTrustFromDirectory">
+{/*      <div className="AddTrustFromDirectory">
         {rows}
-      </div>
+      </div>*/}
     </div>
   }
 }

@@ -130,7 +130,7 @@ export default class Inflation extends React.Component {
           <span className="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4">
             <span>Inflation destination</span>
           </span>
-          <input className="s-inputGroup__item S-flexItem-share" type="text" value={this.state.inflationDest} onChange={this.handleInput} placeholder="example: GCCD6AJOYZCUAQLX32ZJF2MKFFAUJ53PVCFQI3RHWKL3V47QYE2BNAUT" />
+          <input className="s-inputGroup__item S-flexItem-share" type="text" value={this.state.inflationDest} onChange={this.handleInput} placeholder="example: GBZXN7PIRZGNMHGA7MUUUF4GWPY5AYPV6LY4UV2GL6VJGIQRXFDNMADI" />
         </label>
         {submitButton}
         {result}

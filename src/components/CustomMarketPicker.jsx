@@ -34,14 +34,14 @@ export default class CustomMarketPicker extends React.Component {
     return (
       <div className="island">
         <div className="island__header">
-          Custom exchange pair
+          自定义交易对
         </div>
         <div className="island__sub CustomMarketPicker__title">
           <div className="island__sub__division">
-            <h3 className="island__sub__division__title">Base asset</h3>
+            <h3 className="island__sub__division__title">基础资产</h3>
           </div>
           <div className="island__sub__division">
-            <h3 className="island__sub__division__title">Counter asset</h3>
+            <h3 className="island__sub__division__title">交易资产</h3>
           </div>
         </div>
         <div className="island__sub CustomMarketPicker__picker">

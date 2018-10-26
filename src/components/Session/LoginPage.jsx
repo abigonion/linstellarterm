@@ -143,7 +143,7 @@ export default class LoginPage extends React.Component {
             <ul>
               <li>检查网址，确保您在正确的网站上。</li>
               <li>Tellar不会保存您的密钥。它存储在您的浏览器中，并在刷新或退出页面后删除。</li>
-              <li>Tellar是在Apache 2.0开源协议下发布的。它“按原样”提供，不提供保修。开发人员不对应用程序造成的任何损失和活动负责。</li>
+              <li>Tellar是在Apache 2.0开源协议下发布的。开发人员不对应用程序造成的任何损失和活动负责。</li>
             </ul>
           </div>
         </div>

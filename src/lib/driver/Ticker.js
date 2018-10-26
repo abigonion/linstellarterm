@@ -17,7 +17,7 @@ Ticker.prototype.load = function(attempt) {
   if (attempt >= MAX_ATTEMPTS) {
     return;
   }
-  req.getJson('https://api.stellarterm.com/v1/ticker.json')
+  req.getJson('https://api.stellarterm.com/v1/ticker.json') //资产列表
   .then(tickerData => {
     this.ready = true;
     this.data = tickerData;

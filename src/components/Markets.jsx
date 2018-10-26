@@ -19,9 +19,7 @@ export default class Markets extends React.Component {
           <div className="island">
             <AssetList d={this.props.d}></AssetList>
             <div className="AssetListFooter">
-              StellarTerm does not endorse any of these issuers. They are here for informational purposes only.
-              <br />
-              To get listed on StellarTerm, <a href="https://github.com/stellarterm/stellarterm/tree/master/directory" target="_blank" rel="nofollow noopener noreferrer">please read the instructions on GitHub</a>.
+             Tellar 不支持任何发行资产，任何资产都跟我们无关
             </div>
           </div>
         </div>
