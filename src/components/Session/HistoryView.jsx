@@ -34,10 +34,10 @@ export default class HistoryView extends React.Component {
     // IF HISTORY IS NOT LOADED, THEN SHOW A LOADING SCREEN
 
     let toggles = <div className="s-buttonGroup HistoryView__header__right__buttonGroup">
-      <button className={"s-button s-button--light" + (this.state.trade ? ' is-active' : '')} onClick={() => {this.updateFilter('trade')}}>Trade</button>
-      <button className={"s-button s-button--light" + (this.state.account ? ' is-active' : '')} onClick={() => {this.updateFilter('account')}}>Account</button>
-      <button className={"s-button s-button--light" + (this.state.signer ? ' is-active' : '')} onClick={() => {this.updateFilter('signer')}}>Signer</button>
-      <button className={"s-button s-button--light" + (this.state.trustline ? ' is-active' : '')} onClick={() => {this.updateFilter('trustline')}}>Trustline</button>
+      <button className={"s-button s-button--light" + (this.state.trade ? ' is-active' : '')} onClick={() => {this.updateFilter('trade')}}>交易</button>
+      <button className={"s-button s-button--light" + (this.state.account ? ' is-active' : '')} onClick={() => {this.updateFilter('account')}}>账户</button>
+      <button className={"s-button s-button--light" + (this.state.signer ? ' is-active' : '')} onClick={() => {this.updateFilter('signer')}}>签名者</button>
+      <button className={"s-button s-button--light" + (this.state.trustline ? ' is-active' : '')} onClick={() => {this.updateFilter('trustline')}}>信任资产</button>
     </div>
 
 
@@ -52,9 +52,9 @@ export default class HistoryView extends React.Component {
         <div className="island">
           <div className="island__header">
             <div className="HistoryView__header">
-              <div className="HistoryView__header__left">Account History</div>
+              <div className="HistoryView__header__left">账户历史</div>
               <div className="HistoryView__header__right">
-                <span className="HistoryView__header__right__label">Filter: </span>{toggles}
+                <span className="HistoryView__header__right__label">过滤: </span>{toggles}
               </div>
             </div>
           </div>

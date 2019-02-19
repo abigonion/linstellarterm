@@ -100,7 +100,7 @@ export default class Send extends React.Component {
         Step1Content = <div className="Send__content">
           <label className="s-inputGroup Send__input">
             <span className="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4">
-              <span>Destination</span>
+              <span>接收者</span>
             </span>
             <input className="s-inputGroup__item S-flexItem-share" type="text" value={d.send.step1.destInput} onChange={d.send.handlers.updateDestination} placeholder="example: username*getstargazer.com or GC4DJYMFQZVX3R56FVCN3WA7FJFKT24VI67ODTZUENSE4YNUXZ3WYI7R" />
           </label>
@@ -109,11 +109,11 @@ export default class Send extends React.Component {
           {federationNotice}
           <label className="s-inputGroup Send__input">
             <span className="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4">
-              <span>Memo type</span>
+              <span>Memo 类型</span>
             </span>
             <span className={dropdownClassName}>
               <select value={d.send.memoType} onChange={d.send.handlers.updateMemoType} disabled={d.send.memoRequired} className="so-dropdown__select">
-                <option>none</option>
+                <option>无</option>
                 <option>MEMO_ID</option>
                 <option>MEMO_TEXT</option>
                 <option>MEMO_HASH</option>
@@ -152,7 +152,7 @@ export default class Send extends React.Component {
       }
       let Step1 = <div className={step1ClassName}>
         <h3 className={step1TitleClassName}>
-          1. Destination {Step1Edit}
+          1. 接收者 {Step1Edit}
         </h3>
         {Step1Content}
       </div>
@@ -174,7 +174,7 @@ export default class Send extends React.Component {
             </div>
           } else {
             rightSide = <div className="row__shareOption">
-              Destination does not accept this asset.
+              接收者不接受此资产.
             </div>
           }
           console.log(availability)
@@ -204,7 +204,7 @@ export default class Send extends React.Component {
       }
       let Step2 = <div className={step2ClassName}>
         <h3 className={step2TitleClassName}>
-          2. Asset {Step2Edit}
+          2. 资产 {Step2Edit}
         </h3>
         {Step2Content}
       </div>
@@ -255,7 +255,7 @@ export default class Send extends React.Component {
       }
       let Step3 = <div className={step3ClassName}>
         <h3 className={step3TitleClassName}>
-          3. Amount {Step3Edit}
+          3. 数额 {Step3Edit}
         </h3>
         {Step3Content}
       </div>
@@ -270,7 +270,7 @@ export default class Send extends React.Component {
 
       let Step4 = <div className={step4ClassName}>
         <h3 className={step4TitleClassName}>
-          4. Review
+          4. 审核
         </h3>
         <div className="Send__content">
           {Step4Next}
@@ -279,7 +279,7 @@ export default class Send extends React.Component {
 
       return <div className="island">
         <div className="island__header">
-          Send payment
+          发送付款
         </div>
         {Step1}
         <div className="Send__separator"></div>
@@ -292,37 +292,37 @@ export default class Send extends React.Component {
     } else if (state === 'pending') {
       return <div className="island">
         <div className="island__header">
-          Send Payment
+         发送付款
         </div>
         <div className="Send__submitting">
-          Submitting transaction...
+          提交交易...
         </div>
       </div>
     } else if (state === 'success') {
       return <div className="island">
         <div className="island__header">
-          Send Payment
+          发送付款
         </div>
         <h3 className="Send__resultTitle">Success!</h3>
         <div className="Send__resultContent">
           <p>
-            Transaction ID: <a target="_blank" href={d.Server.serverUrl + '/transactions/' + d.send.txId}>{d.send.txId}</a>
+            交易 ID: <a target="_blank" href={d.Server.serverUrl + '/transactions/' + d.send.txId}>{d.send.txId}</a>
             <br />
-            Keep the transaction ID as proof of payment.
+            保留交易ID作为付款证明。
           </p>
         </div>
-        <button className="s-button Send__startOver" onClick={d.send.handlers.reset}>Start over</button>
+        <button className="s-button Send__startOver" onClick={d.send.handlers.reset}>重发</button>
       </div>
     } else { // state is error
       return <div className="island">
         <div className="island__header">
-          Send Payment
+          发送付款
         </div>
-        <h3 className="Send__resultTitle">Error</h3>
+        <h3 className="Send__resultTitle">错误</h3>
         <pre className="Send__errorPre">
           {d.send.errorDetails}
         </pre>
-        <button className="s-button Send__startOver" onClick={d.send.handlers.reset}>Start over</button>
+        <button className="s-button Send__startOver" onClick={d.send.handlers.reset}>重发</button>
       </div>
     }
   }

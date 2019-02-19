@@ -50,12 +50,12 @@ class Session extends React.Component {
     } else if (state === 'unfunded') {
       return <Generic title={'Activate your account'}><Loading darker={true} left>
         <div className="s-alert s-alert--success">
-          Your Wallet Account ID: <strong>{d.session.unfundedAccountId}</strong>
+          您的电子钱包账户ID <strong>{d.session.unfundedAccountId}</strong>
         </div>
-        To use your Stellar account, you must activate it by sending at least 5 lumens (XLM) to your account. You can buy lumens (XLM) from an exchange and send them to your address.
+        要使用您的帐户，您必须通过向您的帐户发送至少5个币来激活它。 您可以从交易所购买将其发送到您的地址。
       </Loading></Generic>
     } else if (state === 'loading') {
-      return <Generic title="Loading account"><Loading>Contacting network and loading account<Ellipsis /></Loading></Generic>
+      return <Generic title="Loading account"><Loading>连接网络并加载账户<Ellipsis /></Loading></Generic>
     } else if (state === 'in') {
       if (!d.session.inflationDone) {
         let currentVoteNote = '';
@@ -64,15 +64,15 @@ class Session extends React.Component {
         }
         return <div>
           <Generic>
-            <h2 className="Session__welcomeTitle">Welcome to Stellar!</h2>
-            <p>Please make sure you have keys securely backed up. Never share your secret key or recovery phrase with anyone.</p>
+            <h2 className="Session__welcomeTitle">欢迎来到易车库数字资产交易平台</h2>
+            <p>请确保您已安全备份密钥。 切勿与任何人分享您的密钥或恢复短语。</p>
             <div className="Generic__divider"></div>
             <div className="Session__inflation">
               <br />
-              By pressing "Accept and Continue". Thank you for your support!{currentVoteNote}
+              按“接受并继续”。感谢您的支持！{currentVoteNote}
               <div className="Session__inflation__next">
-                <a className="Session__inflation__next__noThanks" onClick={d.session.handlers.noThanks}>No thanks</a>
-                <button className="s-button" onClick={d.session.handlers.voteContinue}>Accept and Continue</button>
+                {/*<a className="Session__inflation__next__noThanks" onClick={d.session.handlers.noThanks}>No thanks</a>*/}
+                <button className="s-button" onClick={d.session.handlers.voteContinue}>接受并继续</button>
               </div>
             </div>
           </Generic>
@@ -85,14 +85,14 @@ class Session extends React.Component {
         content = <ErrorBoundary>
           <Generic>
             <div className="s-alert s-alert--primary">
-              <p className="Sesssion__yourId__title">Your Wallet Account ID</p>
+              <p className="Sesssion__yourId__title">您的电子钱包账户ID</p>
               <strong className="clickToSelect Sesssion__yourId__accountId" onClick={clickToSelect}>{this.props.d.session.account.accountId()}</strong>
             </div>
             <p>要接收付款，请与他们分享您的帐户ID（以G开头）。</p>
           </Generic>
           <Generic noTopPadding>
             <h2>存钱在哪里？</h2>
-            <p>在Tellar网络中，资金存在于网络上，只能由拥有密钥的人员移动。这意味着您的密钥非常敏感，任何有权访问它的人都可以移动资金。然而，钱实际上并不是在Tellar。 Tellar只是一个有用的工具，可以帮助您使用密钥进行交易。</p>
+            <p>在去中心化网络中，资金存在于网络上，只能由拥有密钥的人员移动。这意味着您的密钥非常敏感，任何有权访问它的人都可以移动资金。然而，钱实际上并不是在我们的网站。 网站只是一个有用的工具，可以帮助您使用密钥进行交易。</p>
 
             <p><strong>警告</strong>: 小心你的私钥，不要与任何人分享。</p>
           </Generic>

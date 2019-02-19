@@ -6,11 +6,11 @@ export default class Footer extends React.Component {
     return <div className="so-back Footer">
       <div className="so-chunk Footer__chunk">
         <div className="Footer__disclaimer">
-          Cryptocurrency assets are subject to high market risks and volatility. Past performance is not indicative of future results. Investments in blockchain assets may result in loss of part or all of your investment. StellarTerm does NOT endorse ANY asset on the Stellar network. Please do your own research and use caution.
+          加密货币资产受到高市场风险和波动性的影响。过去的表现并不预示未来的结果。对区块链资产的投资可能导致部分或全部投资损失。
         </div>
         <div className="Footer__list">
-          <p  className="Footer__list__item"><a href="#privacy">Privacy Policy</a></p>
-          <p  className="Footer__list__item"><a href="#terms-of-use">Terms of use</a></p>
+          <p  className="Footer__list__item"><a href="#privacy">隐私政策</a></p>
+          <p  className="Footer__list__item"><a href="#terms-of-use">使用条款</a></p>
         </div>
       </div>
     </div>

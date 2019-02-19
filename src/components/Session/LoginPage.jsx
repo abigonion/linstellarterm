@@ -104,9 +104,9 @@ export default class LoginPage extends React.Component {
     let newKeypairDetails;
     if (this.state.newKeypair !== null) {
       newKeypairDetails = <div className="LoginPage__generatedNote">
-        <p><strong>Keep your key secure. This secret key will only be showed to you once. StellarTerm does not save it and will not be able to help you recover it if lost.</strong></p>
-        <p>Public key (will be your Account ID): {this.state.newKeypair.pubKey}</p>
-        <p>Secret key (<strong>SAVE THIS AND KEEP THIS SECURE</strong>): <span className="clickToSelect" onClick={clickToSelect}>{this.state.newKeypair.secretKey}</span></p>
+        <p><strong>保持密钥的安全。这个密钥只会向您显示一次。 我们不会保存它，如果丢失则无法帮助您恢复它。</strong></p>
+        <p>公钥 (这是您的账户ID): {this.state.newKeypair.pubKey}</p>
+        <p>密钥 (<strong>保存并且保证它的安全</strong>): <span className="clickToSelect" onClick={clickToSelect}>{this.state.newKeypair.secretKey}</span></p>
       </div>
     }
 
@@ -142,8 +142,8 @@ export default class LoginPage extends React.Component {
             <h3>安全说明</h3>
             <ul>
               <li>检查网址，确保您在正确的网站上。</li>
-              <li>Tellar不会保存您的密钥。它存储在您的浏览器中，并在刷新或退出页面后删除。</li>
-              <li>Tellar是在Apache 2.0开源协议下发布的。开发人员不对应用程序造成的任何损失和活动负责。</li>
+              <li>我们不会保存您的密钥。它存储在您的浏览器中，并在刷新或退出页面后删除。</li>
+              <li>我们是在Apache 2.0开源协议下发布的。开发人员不对应用程序造成的任何损失和活动负责。</li>
             </ul>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default class LoginPage extends React.Component {
         <div className="LoginPage__greenBox">
           <div className="LoginPage__form">
             <h3>创建帐户密钥对</h3>
-            <p>要开始使用Stellar网络，您必须首先创建一个密钥对（除非您有Ledger Nano）。密钥对由两部分组成：</p>
+            <p>要开始使用去中心化网络，您必须首先创建一个密钥对 。密钥对由两部分组成：</p>
             <ul className="LoginPage__form__list">
               <li><strong>公 钥</strong>:公钥用于标识帐户。它也被称为帐户。该公钥用于接收资金。</li>
               <li><strong>私 钥</strong>:密钥用于访问您的帐户并进行交易。保持此代码的安全。拥有该代码的任何人都可以完全访问该帐户和资金。如果您丢失了密钥，您将无法再访问资金，也没有恢复机制。</li>

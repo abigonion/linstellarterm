@@ -37,7 +37,7 @@ export default class AssetList extends React.Component {
       let priceXLM = asset.price_XLM ? Printify.lightenZeros(asset.price_XLM.toString(), Format.niceNumDecimals(asset.price_XLM)): '-';
       let priceUSD = asset.price_USD ? <span>${Printify.lightenZeros(asset.price_USD.toString(), Format.niceNumDecimals(asset.price_USD))}</span> : '-';
       if (asset.id == 'XLM-native') {
-        priceXLM = Printify.lightenZeros('1.0000000');
+        priceXLM = Printify.lightenZeros('2.0000000');
       }
       let tradeLink;
       if (asset.topTradePairSlug) {

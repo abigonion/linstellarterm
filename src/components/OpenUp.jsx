@@ -13,7 +13,8 @@ export default class OpenUp extends React.Component {
     return <div className="OpenUp">
     <div className="OpenUp__inside">
 
-      <h2>感谢大家支持!</h2>
+      <h2>感谢大家支持!易车库App<a href='www.baidu.com'>下载</a></h2>
+
     </div></div>
   }
 };

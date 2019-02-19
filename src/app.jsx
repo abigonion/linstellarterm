@@ -106,8 +106,8 @@ class TermApp extends React.Component {
           <div className="so-back">
             <OpenUp />
             <div className="HomePage__lead">
-              <h2 className="HomePage__lead__title">这目前还是一个测试系统 <a href="#exchange">-关于Tellar</a></h2>
-              <p className="HomePage__lead__summary">我们要打造<a href="https://github.com/stellarterm/stellarterm" target="_blank" rel="nofollow noopener noreferrer">中国版</a> stellar <a href="https://www.stellar.org/" target="_blank" rel="nofollow noopener noreferrer"> network</a>. <br />发送, 接收, 和 <a href="#exchange">交易</a> 资产在Tellar network.</p>
+              <h2 className="HomePage__lead__title">这目前还是一个测试系统 <a href="#exchange">-车位资产交易</a></h2>
+              <p className="HomePage__lead__summary">易车库的车位数字化资产交易平台</p>
               {this.renderHomePageActions()}
             </div>
           </div>
@@ -116,7 +116,7 @@ class TermApp extends React.Component {
           <div className="island">
             <AssetList d={this.props.d} limit={6}></AssetList>
             <div className="AssetListFooter">
-              View more assets on the <a href="#markets">market list page</a>.
+              在市场列表页面上查看<a href="#markets">更多资产</a>.
             </div>
           </div>
         </div>
@@ -154,18 +154,17 @@ class TermApp extends React.Component {
         </Loading></Generic>
       }
     } else if (urlParts[0] === 'privacy') {
-      body = <Generic title="Privacy Policy">
-        <p>This policy may be updated or revised without notice. It is the responsibility of the user to stay informed about privacy policy changes.</p>
-        <p>StellarTerm does not track your actions on this client.</p>
-        <p>StellarTerm does not store cookies and the website does not contain any analytics scripts.</p>
-        <p>StellarTerm developers never see your private keys.</p>
-        <p>However, StellarTerm.com is hosted on GitHub, AWS, and Cloudflare infrastructure. They may and do have their own tracking systems on their servers. Those services have their own privacy policies and they are not covered by this privacy policy.</p>
-        <p>While StellarTerm does not track you, this does not mean your actions are private. Take note of other privacy issues that may affect you:</p>
+      body = <Generic title="隐私条款">
+        <p>本政策可能会更新或修改，恕不另行通知。 用户有责任随时了解隐私政策的变化。</p>
+        <p>我们不会跟踪您在此客户端上的操作。</p>
+        <p>我们不存储cookie，网站不包含任何分析脚本。</p>
+        <p>开发人员永远不会看到您的私钥。</p>
+        <p>但是，代码托管在GitHub，AWS和Cloudflare基础架构上。 他们可能并且确实在他们的服务器上拥有自己的跟踪系统。 这些服务有自己的隐私政策，不受本隐私政策的约束。</p>
+        <p>虽然我们不会跟踪您，但这并不意味着您的行为是私密的。 请注意可能影响您的其他隐私问题：</p>
         <ul className="privacy__ul">
-          <li>Stellar is a public ledger. Anyone can see anything that happens on the network.</li>
-          <li>Your inflation vote is publicly visible.</li>
-          <li>Your computer might be compromised.</li>
-          <li>The StellarTerm website might be compromised.</li>
+          <li>网站可能会遭到入侵。</li>
+          <li>您的计算机可能已被盗用。</li>
+          <li>去中心化网络是一个公共分类帐。 任何人都可以看到网络上发生的任何事情。</li>
         </ul>
       </Generic>
     } else if (urlParts[0] === 'terms-of-use') {
@@ -222,7 +221,7 @@ class TermApp extends React.Component {
           <Header d={this.props.d} urlParts={urlParts} network={network}></Header>
           {body}
         </div>
-     {/* <Footer />   */}
+     { <Footer /> }
       </div>
     </div>;
 

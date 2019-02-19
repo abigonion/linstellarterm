@@ -27,17 +27,17 @@ export default class MinBalance extends React.Component {
     return <div>
     <div className="island__sub">
       <div className="island__sub__division MinBalance__sub">
-        <p>The Stellar network requires accounts to maintain a <a href="https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance">minimum balance</a>. A 1 XLM minimum balance is required with an additional requirement 0.5 XLM for each entry in the account such as a trustline or offer. You can read more about this on the <a href="https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance">Stellar developer docs</a></p>
-        <p>Each entry (asset accepted, offer, signer) increases your minimum balance by 0.5 XLM. Additionally, StellarTerm enforces a 0.1 XLM of extra minimum balance in an attempt to make sure your account can still make transactions without going below the network minimum balance requirements.</p>
-        <p><strong>To decrease your minimum balance</strong>, you can remove an existing offer or <a href="#account/addTrust">unaccept an asset</a>.</p>
+        <br/>
+        <p>去中心化网路要求账户保持最低余额。需要1个币的最低余额，账户中如果有挂买单或则卖单的需要额外的0.5个币，您可以在我们的开发者人员文档中阅读有关此内容的更多信息</p>
+        <p>每个条目（资产接受，挂单，签名者）将您的最低余额增加0.5 个。 此外，去中心化网络强制执行0.1 个币的额外最低余额，以确保您的帐户仍然可以在不低于网络最低余额要求的情况下进行交易。</p>
       </div>
       <div className="island__sub__division MinBalance__sub MinBalance__sub--table">
         <table className="MinBalance__table">
           <thead className="MinBalance__table__head">
             <tr>
-              <td className="MinBalance__table__type">Entry type</td>
+              <td className="MinBalance__table__type">使用类型</td>
               <td>#</td>
-              <td className="MinBalance__table__lumens">XLM</td>
+              <td className="MinBalance__table__lumens">余额</td>
             </tr>
           </thead>
           <tbody>

@@ -34,10 +34,10 @@ export default class ManageCurrentTrust extends React.Component {
 
     return <div className="island">
       <div className="island__header">
-        Assets you accept
+       您接受的资产
       </div>
       <div className="island__paddedContent">
-        要在Stellar网络上接收资产，您必须先“接受”资产。
+        要在去中心化网络上接收资产，您必须先“接受”资产。
       </div>
       <div className="island__separator"></div>
       <table className="ManageCurrentTrust">
