@@ -8,7 +8,7 @@ import Markets from './components/Markets.jsx';
 import Session from './components/Session.jsx';
 import Exchange from './components/Exchange.jsx';
 import Generic from './components/Generic.jsx';
-//import Download from './components/Download.jsx';
+import Download from './components/Download.jsx';
 import Loading from './components/Loading.jsx';
 import OpenUp from './components/OpenUp.jsx';
 import Stellarify from './lib/Stellarify';
@@ -106,7 +106,7 @@ class TermApp extends React.Component {
           <div className="so-back">
             <OpenUp />
             <div className="HomePage__lead">
-              <h2 className="HomePage__lead__title">这目前还是一个测试系统 <a href="#exchange">-车位资产交易</a></h2>
+              <h2 className="HomePage__lead__title">易车库-<a href="#exchange">中国车位产权数字交易管理平台</a></h2>
               <p className="HomePage__lead__summary">易车库的车位数字化资产交易平台</p>
               {this.renderHomePageActions()}
             </div>

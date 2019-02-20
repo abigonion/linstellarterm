@@ -19,7 +19,7 @@ export default class Markets extends React.Component {
           <div className="island">
             <AssetList d={this.props.d}></AssetList>
             <div className="AssetListFooter">
-             Tellar 不支持任何发行资产，任何资产都跟我们无关
+             我们不支持任何发行资产，任何资产都跟我们无关
             </div>
           </div>
         </div>

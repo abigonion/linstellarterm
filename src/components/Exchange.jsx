@@ -23,7 +23,7 @@ export default class Exchange extends React.Component {
   render() {
 
     if (!this.props.d.orderbook.data.ready) {
-      return <Generic title="Loading orderbook">Loading orderbook data from Horizon<Ellipsis /></Generic>
+      return <Generic title="Loading orderbook">从Horizon中加载交易数据<Ellipsis /></Generic>
     }
 
     let thinOrderbookWarning;
@@ -55,7 +55,7 @@ export default class Exchange extends React.Component {
       if (aggregateDepth < 100) {
         thinOrderbookWarning = <div className="Exchange__warning">
           <div className="s-alert s-alert--warning">
-            The orderbook for this pair is thin. To get a better price, create an offer without taking an existing one.
+           这个交易对的挂单很少。
           </div>
         </div>
       }
@@ -75,7 +75,7 @@ export default class Exchange extends React.Component {
     let offermakers;
     if (directoryAsset !== null && directoryAsset.disabled !== undefined) {
       offermakers = <div className="Exchange__orderbookDisabled">
-        Offer making has been disabled for this pair. You may still cancel your existing offers below.
+       交易对已被禁用，你仍然能够删除你已经存在对挂单。
       </div>
     } else {
       offermakers = <OfferMakers d={this.props.d}></OfferMakers>

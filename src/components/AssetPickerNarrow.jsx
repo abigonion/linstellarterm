@@ -50,15 +50,15 @@ export default class AssetPickerNarrow extends React.Component {
     return <div>
       <label className="s-inputGroup AssetPickerNarrow__inputGroup AssetPickerNarrow__code">
         <span className="s-inputGroup__item AssetPickerNarrow__tag s-inputGroup__item--tag S-flexItem-full">
-          <span>Asset Code</span>
+          <span>资产代码</span>
         </span>
-        <input className="s-inputGroup__item AssetPickerNarrow__input S-flexItem-full" type="text" value={this.state.code} onChange={e => this.handleInput('code', e)} placeholder="example: XLM" />
+        <input className="s-inputGroup__item AssetPickerNarrow__input S-flexItem-full" type="text" value={this.state.code} onChange={e => this.handleInput('code', e)} placeholder="example: XXX" />
       </label>
       <label className="s-inputGroup AssetPickerNarrow__inputGroup AssetPickerNarrow__issuer">
         <span className="s-inputGroup__item AssetPickerNarrow__tag s-inputGroup__item--tag S-flexItem-full">
-          <span>Issuer Account ID or federation</span>
+          <span>发行者账户ID</span>
         </span>
-        <input className="s-inputGroup__item AssetPickerNarrow__input S-flexItem-full" type="text" value={this.state.issuer} onChange={e => this.handleInput('issuer', e)} placeholder="example: naobtc.com or GC4DJYMFQZVX3R56FVCN3WA7FJFKT24VI67ODTZUENSE4YNUXZ3WYI7R" />
+        <input className="s-inputGroup__item AssetPickerNarrow__input S-flexItem-full" type="text" value={this.state.issuer} onChange={e => this.handleInput('issuer', e)} placeholder="例如 :GC4DJYMFQZVX3R56FVCN3WA7FJFKT24VI67ODTZUENSE4YNUXZ3WYI7R" />
       </label>
     </div>
   }
