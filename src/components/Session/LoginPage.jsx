@@ -98,7 +98,7 @@ export default class LoginPage extends React.Component {
     if (this.state.invalidKey) {
       errorMessage = <div className="s-alert s-alert--alert">Invalid secret key. Hint: it starts with the letter S and is all uppercase</div>
     } else if (this.props.setupError) {
-      errorMessage = <div className="s-alert s-alert--alert">Unable to contact network. Please check your internet connection and allow connections to horizon.stellar.org. Maybe an adblocker or plugin (such as Privacy Badger) is preventing the client from communicating with the network.</div>
+      errorMessage = <div className="s-alert s-alert--alert">无法联系网络。请检查您的互联网连接并允许连接到网络</div>
     }
 
     let newKeypairDetails;

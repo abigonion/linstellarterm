@@ -19,6 +19,24 @@ directory.DirectoryBuilder = DirectoryBuilder;
 //   code: 'ASSETCODE_ASSETCODE',
 //   issuer: 'Ga_issuer_account_id',
 // });
+directory.addAnchor({
+  domain: 'ternio.io',
+  website: 'https://ternio.io',
+  logo: 'ternio.io',
+  color: '#1D344F',
+  displayName: 'TERN',
+});
+
+directory.addAsset('ternio.io', {
+  code: 'TERN',
+  issuer: 'GDGQDVO6XPFSY4NMX75A7AOVYCF5JYGW2SHCJJNWCQWIDGOZB53DGP6C',
+  type: 'token',
+});
+directory.addPair({
+  baseBuying: ['TERN', 'ternio.io'],
+  counterSelling: ['XLM', 'native'],
+});
+
 
 
 // Assert that each asset has a trading pair
