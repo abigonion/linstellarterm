@@ -68,6 +68,7 @@ export default class PriceChart extends React.Component {
     this.rendered = false;
   }
   componentDidMount() {
+    console.table(this.props.d.orderbook.data)
     if (this.props.d.orderbook.data.trades !== undefined) {
       this.renderChart(this.props.d.orderbook.data, this.props.d.orderbook.data.trades);
     } else {
@@ -97,7 +98,7 @@ export default class PriceChart extends React.Component {
     this.orderbook = orderbook;
 
     if (orderbook.trades.length === 0) {
-      elem.getElementsByClassName('PriceChart__message')[0].textContent = `No trade history for ${pairName}`;
+      elem.getElementsByClassName('PriceChart__message')[0].textContent = ` ${pairName}没有交易历史`;
       return;
     }
 

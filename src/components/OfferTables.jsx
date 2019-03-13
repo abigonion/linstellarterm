@@ -67,7 +67,7 @@ export default class OfferTables extends React.Component {
     return (
       <div className="OfferTables island__sub">
         <div className="island__sub__division">
-          <h3 className="island__sub__division__title">Buy offers</h3>
+          <h3 className="island__sub__division__title">买单</h3>
           {OfferTable({
             side: 'buy',
             offers: buys,
@@ -78,7 +78,7 @@ export default class OfferTables extends React.Component {
           })}
         </div>
         <div className="island__sub__division">
-          <h3 className="island__sub__division__title">Sell offers</h3>
+          <h3 className="island__sub__division__title">卖单</h3>
           {OfferTable({
             side: 'sell',
             offers: sells,

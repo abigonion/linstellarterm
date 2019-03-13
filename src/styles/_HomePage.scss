@@ -55,8 +55,10 @@
   text-align: center;
 }
 .HomePage__black {
-  // background: $s-color-primary4;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.0));
+  //background: $s-color-primary4;
+  //background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.0));
+  //background-image: url("");
+  background-repeat: no-repeat;
   padding-bottom: 300px;
 }
 

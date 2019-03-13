@@ -13,7 +13,7 @@ function matchesAsset(res, tradeType, asset) {
     throw new TypeError('tradeType argument for matchesAsset is supposed to be either bought or sold');
   }
 
-  return (res[prefix + '_asset_type'] === 'native' && asset.code === 'XLM' && asset.issuer === null)
+  return (res[prefix + '_asset_type'] === 'native' && asset.code === 'CAR' && asset.issuer === null)
     ||
   (res[prefix + '_asset_code'] === asset.code && res[prefix + '_asset_issuer'] === asset.issuer);
 }

@@ -33,14 +33,14 @@ export default class PairPicker extends React.Component {
         } else {
           let latestPrice = (Number(this.props.d.orderbook.data.asks[0].price) + Number(this.props.d.orderbook.data.bids[0].price)) / 2;
           if (baseNative) {
-            dataRow = <p className="PairPicker__infoBar__ticker__data">{Format.niceRound(latestPrice)} XLM/{counterSelling.getCode()}</p>
+            dataRow = <p className="PairPicker__infoBar__ticker__data">{Format.niceRound(latestPrice)} CAR/{counterSelling.getCode()}</p>
           } else {
             let latestXLM = Format.niceRound(latestPrice);
             if (1 - this.props.d.orderbook.data.bids[0].price/this.props.d.orderbook.data.asks[0].price > 0.4) {
               latestXLM = Format.niceRound(this.props.d.orderbook.data.bids[0].price);
             }
             let latestUSD = Format.niceRound(latestXLM * this.props.d.ticker.data._meta.externalPrices.USD_XLM);
-            dataRow = <p className="PairPicker__infoBar__ticker__data">{latestXLM} XLM<span className="PairPicker__infoBar__ticker__spacer">&nbsp;</span>${latestUSD}</p>
+            dataRow = <p className="PairPicker__infoBar__ticker__data">{latestXLM} CAR<span className="PairPicker__infoBar__ticker__spacer">&nbsp;</span>${latestUSD}</p>
           }
         }
       }
@@ -50,7 +50,7 @@ export default class PairPicker extends React.Component {
           <AssetPair baseBuying={baseBuying} counterSelling={counterSelling}></AssetPair>
         </div>
         <div className="PairPicker__infoBar__ticker">
-          <p className="PairPicker__infoBar__ticker__title">Current price for {baseBuying.getCode()}</p>
+          <p className="PairPicker__infoBar__ticker__title"> {baseBuying.getCode()}当前价格</p>
           {dataRow}
         </div>
       </div>

@@ -37,14 +37,14 @@ export default class Exchange extends React.Component {
 
       let aggregateDepth = 0;
 
-      if (baseSlug !== 'XLM-native') {
+      if (baseSlug !== 'CAR-native') {
         for (let i in ticker.data.assets) {
           if (ticker.data.assets[i].slug === baseSlug) {
             aggregateDepth += ticker.data.assets[i].depth10_USD;
           }
         }
       }
-      if (counterSlug !== 'XLM-native') {
+      if (counterSlug !== 'CAR-native') {
         for (let i in ticker.data.assets) {
           if (ticker.data.assets[i].slug === counterSlug) {
             aggregateDepth += ticker.data.assets[i].depth10_USD;
@@ -87,9 +87,9 @@ export default class Exchange extends React.Component {
       </div>
       <PriceChart d={this.props.d}></PriceChart>
       <div className="so-back islandBack">
-        <div className="island Exchange__orderbook">
+        <div className="island Exchange__orderbook"Orderbook>
           <div className="island__header">
-            Orderbook
+            交易订单
           </div>
           {thinOrderbookWarning}
           {warningWarning}
@@ -100,14 +100,14 @@ export default class Exchange extends React.Component {
           </div>
         </div>
       </div>
-      <div className="so-back islandBack">
-        <div className="island">
-          <div className="island__header">
-            Manage offers
-          </div>
-          <ManageOffers d={this.props.d}></ManageOffers>
-        </div>
-      </div>
+      {/*<div className="so-back islandBack">*/}
+        {/*<div className="island">*/}
+          {/*<div className="island__header">*/}
+            {/*Manage offers*/}
+          {/*</div>*/}
+          {/*<ManageOffers d={this.props.d}></ManageOffers>*/}
+        {/*</div>*/}
+      {/*</div>*/}
     </div>
   }
 }

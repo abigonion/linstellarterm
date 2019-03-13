@@ -83,11 +83,11 @@ function loadAssets(ticker) {
   ticker.assets = [];
 
   ticker.assets.push({
-    id: 'XLM-native',
-    code: 'XLM',
+    id: 'CAR-native',
+    code: 'CAR',
     issuer: null,
     domain: 'native',
-    slug: 'XLM-native',
+    slug: 'CAR-native',
     website: 'https://www.stellar.org/lumens/',
     price_XLM: 1, // LOL 1 dogecoin = 1 dogecoin; 1 lumen = 1 lumen
     price_USD: ticker._meta.externalPrices.USD_XLM,
@@ -245,7 +245,7 @@ function phase3(ticker) {
 function phase4(ticker) {
   // Assign a score to each asset
   _.each(ticker.assets, asset => {
-    if (asset.id === 'XLM-native') {
+    if (asset.id === 'CAR-native') {
       asset.activityScore = 100;
       return;
     }

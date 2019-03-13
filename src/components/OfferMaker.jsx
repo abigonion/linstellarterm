@@ -241,7 +241,7 @@ export default class OfferMaker extends React.Component {
         submit = <input type="submit" className="s-button" disabled={true} value="Creating offer..." disabled={true}></input>
       }
     } else {
-      submit = <span className="OfferMaker__message"><a href="#account">Log in</a> to create an offer</span>
+      submit = <span className="OfferMaker__message"><a href="#account">登陆</a>去交易</span>
     }
 
     let summary;
@@ -257,14 +257,13 @@ export default class OfferMaker extends React.Component {
     if (this.state.errorMessage) {
       if (this.state.errorType === 'buy_not_authorized') {
         error = <div className="s-alert s-alert--alert OfferMaker__message">
-          Unable to create offer because the issuer has not authorized you to trade this asset. To fix this issue, check with the issuer's website.<br /><br />NOTE: Some issuers are restrictive in who they authorize.
+          由于发行人未授权您交易此资产，因此无法创建要约。 要解决此问题，请查看发行人的网站。<br /><br />注意：一些发行人对他们授权的人有限制。
         </div>;
       } else if (this.state.errorType === 'op_low_reserve') {
-        error = <div className="s-alert s-alert--alert OfferMaker__message">Your account does not have enough XLM to meet the <a href="https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance" target="_blank" rel="nofollow noopener noreferrer">minimum balance</a>. For more info, see <a href="#account">the minimum balance section</a> of the account page.<br /><br />Solutions:
+        error = <div className="s-alert s-alert--alert OfferMaker__message">您的帐户没有足够的CAR来满足最低余额. 有关详细信息<a href="#account"></a>请看账户界面<br /><br />解决方案:
           <ul className="OfferMaker__errorList">
-            <li>Send at least 1 XLM to your account</li>
-            <li>Cancel an existing an offer</li>
-            <li>Decrease your minimum balance by <a href="#account/addTrust">unaccepting an asset</a></li>
+            <li>向您的帐户发送至少1个CAR</li>
+            <li> 通过<a href="#account/addTrust">取消接受资产来降低最低余额</a></li>
           </ul>
         </div>;
       } else if (this.state.errorType === 'tx_bad_seq') {

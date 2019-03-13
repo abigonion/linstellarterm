@@ -36,7 +36,7 @@ export default class AssetList extends React.Component {
 
       let priceXLM = asset.price_XLM ? Printify.lightenZeros(asset.price_XLM.toString(), Format.niceNumDecimals(asset.price_XLM)): '-';
       let priceUSD = asset.price_USD ? <span>${Printify.lightenZeros(asset.price_USD.toString(), Format.niceNumDecimals(asset.price_USD))}</span> : '-';
-      if (asset.id == 'XLM-native') {
+      if (asset.id == 'CAR-native') {
         priceXLM = Printify.lightenZeros('2.0000000');
       }
       let tradeLink;
@@ -46,7 +46,7 @@ export default class AssetList extends React.Component {
       let volume24h = asset.volume24h_USD ? '$' + asset.volume24h_USD.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0}) : '$0';
 
       let change24hPercentage;
-      if (asset.id === 'XLM-native') {
+      if (asset.id === 'CAR-native') {
         change24hPercentage = this.dTicker.data._meta.externalPrices.USD_XLM_change;
       } else {
         change24hPercentage = asset.change24h_USD;
@@ -63,7 +63,7 @@ export default class AssetList extends React.Component {
 
       rows.push(<a href={'#exchange/' + asset.topTradePairSlug} key={'asset-' + asset.id} className="AssetList__asset">
         <div className="AssetList__asset__assetCard"><AssetCard2 code={asset.code} issuer={asset.issuer} boxy={false}></AssetCard2></div>
-        <div className="AssetList__asset__amount">{priceXLM}{Printify.lighten(' XLM')}</div>
+        <div className="AssetList__asset__amount">{priceXLM}{Printify.lighten(' CAR')}</div>
         <div className="AssetList__asset__amount">{priceUSD}</div>
         <div className="AssetList__asset__amount">{volume24h}</div>
         <div className="AssetList__asset__amount">{change24h}</div>
@@ -75,7 +75,7 @@ export default class AssetList extends React.Component {
       <div className="AssetList">
         <div className="AssetList__head__row">
           <div className="AssetList__head__cell AssetList__head__asset">Asset</div>
-          <div className="AssetList__head__cell AssetList__head__amount">Price (XLM)</div>
+          <div className="AssetList__head__cell AssetList__head__amount">Price (CAR)</div>
           <div className="AssetList__head__cell AssetList__head__amount">Price (USD)</div>
           <div className="AssetList__head__cell AssetList__head__amount">Volume (24h)</div>
           <div className="AssetList__head__cell AssetList__head__amount">Change (24h)</div>

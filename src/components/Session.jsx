@@ -48,7 +48,7 @@ class Session extends React.Component {
     if (state === 'out') {
       return <LoginPage setupError={setupError} d={d} urlParts={this.props.urlParts}></LoginPage>
     } else if (state === 'unfunded') {
-      return <Generic title={'Activate your account'}><Loading darker={true} left>
+      return <Generic title={'激活您的账号'}><Loading darker={true} left>
         <div className="s-alert s-alert--success">
           您的电子钱包账户ID <strong>{d.session.unfundedAccountId}</strong>
         </div>

@@ -56,7 +56,7 @@ const Stellarify = {
     }
 
     if (issuer === 'native') {
-      if (code !== 'XLM') {
+      if (code !== 'CAR') {
         console.error(`Native issuers must have XLM code`);
       }
       issuer = null;

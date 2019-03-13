@@ -26,7 +26,7 @@ export default class AssetPickerNarrow extends React.Component {
     }
   }
   checkInputs(newState) {
-    if (newState.code === 'XLM' && newState.issuer === '') {
+    if (newState.code === 'CAR' && newState.issuer === '') {
       return StellarSdk.Asset.native();
     }
 

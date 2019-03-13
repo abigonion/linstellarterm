@@ -68,7 +68,7 @@ const MagicSpoon = {
             return;
           }
           return nativeBalances.push({
-            code: 'XLM',
+            code: 'CAR',
             issuer: null,
             balance: sdkBalance.balance,
             sdkBalance,
@@ -141,32 +141,32 @@ const MagicSpoon = {
       items.push({
         entryType: 'Base reserve',
         amount: 1,
-        XLM: 1,
+        CAR: 1,
       });
 
       items.push({
         entryType: 'Trustlines',
         amount: entriesTrustlines,
-        XLM: entriesTrustlines * 0.5,
+        CAR: entriesTrustlines * 0.5,
       });
 
       items.push({
         entryType: 'Offers',
         amount: entriesOffers,
-        XLM: entriesOffers * 0.5,
+        CAR: entriesOffers * 0.5,
       });
       items.push({
         entryType: 'Others',
         amount: entriesOthers,
-        XLM: entriesOthers * 0.5,
+        CAR: entriesOthers * 0.5,
       });
       items.push({
         entryType: 'Extra',
         amount: '',
-        XLM: 0.5,
+        CAR: 0.5,
       });
 
-      let totalLumens = _.sumBy(items, 'XLM');
+      let totalLumens = _.sumBy(items, 'CAR');
       return {
         items,
         totalLumens,

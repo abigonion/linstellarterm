@@ -25,13 +25,13 @@ function DirectoryBuilder() {
 
   // Special anchors aren't really anchors at all!
   this.nativeAnchor = {
-    name: 'Tellar Network',
+    name: 'Network',
     website: 'https://www.stellar.org/lumens/',
     logo: logos['stellar'],
     color: '#08b5e5',
   };
   this.nativeAsset = {
-    code: 'XLM',
+    code: 'CAR',
     issuer: null,
     domain: 'native',
   };
@@ -276,7 +276,7 @@ DirectoryBuilder.prototype.getAnchor = function(domain) {
 
 // Returns null if asset is not found
 DirectoryBuilder.prototype.getAssetByDomain = function(code, domain) {
-  if (code === 'XLM' && domain === 'native') {
+  if (code === 'CAR' && domain === 'native') {
     return this.nativeAsset;
   }
   if (!this.anchors.hasOwnProperty(domain)) {
@@ -304,7 +304,7 @@ DirectoryBuilder.prototype.getAssetByDomain = function(code, domain) {
 
 // Returns unknown if asset is not found
 DirectoryBuilder.prototype.getAssetByAccountId = function(code, issuer) {
-  if (code === 'XLM' && issuer === null) {
+  if (code === 'CAR' && issuer === null) {
     return this.nativeAsset;
   }
 

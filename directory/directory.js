@@ -19,23 +19,7 @@ directory.DirectoryBuilder = DirectoryBuilder;
 //   code: 'ASSETCODE_ASSETCODE',
 //   issuer: 'Ga_issuer_account_id',
 // });
-directory.addAnchor({
-  domain: 'ternio.io',
-  website: 'https://ternio.io',
-  logo: 'ternio.io',
-  color: '#1D344F',
-  displayName: 'TERN',
-});
 
-directory.addAsset('ternio.io', {
-  code: 'TERN',
-  issuer: 'GDGQDVO6XPFSY4NMX75A7AOVYCF5JYGW2SHCJJNWCQWIDGOZB53DGP6C',
-  type: 'token',
-});
-directory.addPair({
-  baseBuying: ['TERN', 'ternio.io'],
-  counterSelling: ['XLM', 'native'],
-});
 
 
 
@@ -44,9 +28,9 @@ let remainingAssets = Object.assign({}, directory.assets);
 
 for (let pairId in directory.pairs) {
   let pair = directory.pairs[pairId];
-  if (pair.baseBuying.code === 'XLM' && pair.baseBuying.issuer === null) {
+  if (pair.baseBuying.code === 'CAR' && pair.baseBuying.issuer === null) {
     delete remainingAssets[pair.counterSelling.code + '-' + pair.counterSelling.issuer];
-  } else if (pair.counterSelling.code === 'XLM' && pair.counterSelling.issuer === null) {
+  } else if (pair.counterSelling.code === 'CAR' && pair.counterSelling.issuer === null) {
     delete remainingAssets[pair.baseBuying.code + '-' + pair.baseBuying.issuer];
   }
 }
