@@ -3,7 +3,7 @@
 }
 
 .HeaderNetworkBarBack {
-  background: $s-color-primary7;
+  background: #1b65d5;
   padding: 8px 0;
 }
 .HeaderNetworkBar {
@@ -13,15 +13,26 @@
 .HeaderBack {
   background: #1b65d5;
   position: relative;
+  display: flex;
 }
 .Header {
   display: flex;
   padding-top: 18px;
-  padding-left: 18px;
   padding-right: 18px;
   align-items: baseline;
   justify-content: space-between;
   color: #FFEFFF;
+  background: #1b65d5;
+}
+.logo{
+  margin-top: 15px;
+  margin-left: 10%;
+  height: 44px;
+  width: 180px;
+  display: flex;
+  flex-direction:row;
+  background-image: url("https://github.com/abigonion/linstellarterm/blob/car/images/logo.png?raw=true");
+  background-repeat: no-repeat;
 }
 .Header:after {
   display: none;
@@ -51,9 +62,9 @@
   border-radius: 3px;
 }
 .Header__nav__item--link.is-current {
-  background: $s-color-neutral8;
+  background: #1b65d5;
 }
 .Header__nav__item.Header__nav__item--link:hover {
-  background: $s-color-primary4;
+  font-size: 18px;
   color: #fff;
 }

@@ -28,10 +28,10 @@
   display: block;
 }
 .LoginPage__sidebar__tab.is-active {
-  background: $s-color-primary4;
+  background: #eb6460;
   font-weight: bold;
   color: #fff;
-  border-color: $s-color-primary3;
+  border-color: #c80600;
 }
 .LoginPage__sidebar__tab.is-active img.LoginPage__sidebar__tab__img--invertible {
   filter: brightness(100);

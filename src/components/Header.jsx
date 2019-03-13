@@ -21,8 +21,9 @@ export default class Header extends React.Component {
     return <div className="HeaderBackBack">
       {networkBar}
       <div className="so-back HeaderBack">
+        <div className="logo"></div>
         <div className="so-chunk Header">
-          <nav className="Header__nav">
+          <nav className="Header__nav" href="#">
             {/*<a className="Header__nav__item Header__nav__item--logo" href="#">首页</a>*/}
             <a className="Header__nav__item Header__nav__item--link" href="#">首页</a>
             {/*<a className={'Header__nav__item Header__nav__item--link' + (this.props.urlParts[0] === 'exchange' ? ' is-current' : '')} href="#exchange">Exchange</a>*/}
@@ -31,7 +32,7 @@ export default class Header extends React.Component {
             <a className={'Header__nav__item Header__nav__item--link' + (this.props.urlParts[0] === 'exchange' ? ' is-current' : '')} href="#exchange">交易</a>
             <a className={'Header__nav__item Header__nav__item--link' + (this.props.urlParts[0] === 'download' ? ' is-current' : '')} href="#download">下载</a>
           </nav>
-          <span className="Header__version">v{window.stBuildInfo.version}</span>
+          {/*<span className="Header__version">v{window.stBuildInfo.version}</span> //隐藏v版本号*/}
         </div>
       </div>
     </div>

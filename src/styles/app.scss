@@ -47,7 +47,16 @@ ul.privacy__ul {
   flex-direction: column;
   justify-content: space-between;
 }
+//重写button
+.s-button{
+  background: #eb6460;
+  border: 1px solid #c80600;
 
+}
+.s-button:hover {
+  border: 1px solid #eb6460;
+  background: #eb6460;
+}
 @import 'island';
 @import 'lightenZeros';
 @import 'Ellipsis';
