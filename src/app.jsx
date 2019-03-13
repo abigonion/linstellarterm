@@ -104,7 +104,7 @@ class TermApp extends React.Component {
       body = <div>
      <div className="HomePage__black">
           <div className="so-back">
-            <OpenUp />
+            {/*<OpenUp />*/}
             <div className="HomePage__lead">
               <h2 className="HomePage__lead__title">易车库-<a href="#exchange">中国车位产权数字交易管理平台</a></h2>
               <p className="HomePage__lead__summary">易车库的车位数字化资产交易平台</p>

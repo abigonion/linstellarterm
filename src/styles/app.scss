@@ -12,6 +12,9 @@ html {
 }
 body {
   //background: linear-gradient(0deg,#ced0ff,#c0ecff);
+  background-image: url("https://github.com/abigonion/linstellarterm/blob/car/images/bg.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: 100% 800px;
   color: $s-color-neutral3;
   font-size: $s-scale-4;
   min-width: 1052px;
