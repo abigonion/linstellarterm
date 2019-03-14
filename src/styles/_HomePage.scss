@@ -3,7 +3,7 @@
   width: 800px;
   color: #000; // bold color
   text-shadow: 0 1px 3px rgba(255,255,255,0.1);
-  padding-top: 60px;
+  padding-top: 120px;
   padding-bottom: 90px;
   font-weight: 400;
 }
@@ -21,7 +21,7 @@
 .HomePage__lead__title {
   font-size: $s-scale-c;
   font-weight: 300;
-  font-size: 42px;
+  font-size: 32px;
   margin-bottom: 27px;
   color: #FFEFFF;
 }
@@ -65,7 +65,7 @@
 }
 
 .HomePage__assetList {
-  margin-top: -300px;
+  margin-top: -250px;
 }
 
 .HomePage__screenshot {

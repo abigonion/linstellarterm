@@ -20,7 +20,7 @@ import Driver from './lib/Driver';
 
 let network = {
 //  horizonUrl: 'https://horizon.stellar.org',
-  horizonUrl: 'https://sudo38.com',
+  horizonUrl: 'https://network.hongrenlian.cn',
   networkPassphrase: StellarSdk.Networks.PUBLIC,
   isDefault: true, // If it's default, then we don't show a notice bar at the top
   isTestnet: false,
@@ -107,8 +107,8 @@ class TermApp extends React.Component {
             {/*<OpenUp />*/}
             <div className="banner__logo"></div>
             <div className="HomePage__lead">
-              <h2 className="HomePage__lead__title">易车库-<a href="#exchange">中国车位产权数字交易管理平台</a></h2>
-              <p className="HomePage__lead__summary">易车库的车位数字化资产交易平台</p>
+              <h2 className="HomePage__lead__title">易车库<a href="#exchange"></a></h2>
+              <p className="HomePage__lead__summary">中国车位产权数字交易管理平台</p>
               {this.renderHomePageActions()}
             </div>
           </div>

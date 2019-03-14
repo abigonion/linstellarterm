@@ -12,7 +12,7 @@ html {
 }
 body {
   //background: linear-gradient(0deg,#ced0ff,#c0ecff); //#1b65d5
-  background:linear-gradient(to bottom right, #1b65d5 70%, transparent 30%);
+  background:linear-gradient(to bottom right, #1b65d5 70%, transparent 70.1%);
   color: $s-color-neutral3;
   font-size: $s-scale-4;
   min-width: 1052px;
@@ -56,7 +56,17 @@ ul.privacy__ul {
   background: #eb6460;
 }
 .banner__logo{
-  background-image: url("");
+  display: flex;
+  margin-top: 30px;
+  margin-right: 30%;
+  float: right;
+  min-height: 300px;
+  min-width: 300px;
+  max-height: 330px;
+  max-width: 330px;
+  background-image: url("https://github.com/abigonion/linstellarterm/blob/car/images/ban.png?raw=true");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 @import 'island';
 @import 'lightenZeros';
