@@ -105,6 +105,7 @@ class TermApp extends React.Component {
      <div className="HomePage__black">
           <div className="so-back">
             {/*<OpenUp />*/}
+            <div className="banner__logo"></div>
             <div className="HomePage__lead">
               <h2 className="HomePage__lead__title">易车库-<a href="#exchange">中国车位产权数字交易管理平台</a></h2>
               <p className="HomePage__lead__summary">易车库的车位数字化资产交易平台</p>
@@ -178,7 +179,7 @@ class TermApp extends React.Component {
         try {
           let baseBuying = Stellarify.parseAssetSlug(urlParts[1]);
           let counterSelling = Stellarify.parseAssetSlug(urlParts[2]);
-
+          console.dir(counterSelling);
           this.d.orderbook.handlers.setOrderbook(baseBuying, counterSelling);
           body = <Exchange d={this.d}></Exchange>
         } catch (e) {

@@ -52,7 +52,7 @@ export default class Exchange extends React.Component {
         }
       }
 
-      if (aggregateDepth < 100) {
+      if (aggregateDepth < 10) {
         thinOrderbookWarning = <div className="Exchange__warning">
           <div className="s-alert s-alert--warning">
            这个交易对的挂单很少。

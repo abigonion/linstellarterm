@@ -68,7 +68,6 @@ export default class PriceChart extends React.Component {
     this.rendered = false;
   }
   componentDidMount() {
-    console.table(this.props.d.orderbook.data)
     if (this.props.d.orderbook.data.trades !== undefined) {
       this.renderChart(this.props.d.orderbook.data, this.props.d.orderbook.data.trades);
     } else {
