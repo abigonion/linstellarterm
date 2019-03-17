@@ -147,7 +147,7 @@ export default function Send(driver) {
     sign: async (tx) => {
       if (this.account.inflation_destination === 'GCTI6HMWRH2QGMFKWVU5M5ZSOTKL7P7JAHZDMJJBKDHGWTEC4CJ7O3DU') {
         console.log('Signing tx\nhash:', tx.hash().toString('hex'),'\nsequence: ' + tx.sequence, '\n\n' + tx.toEnvelope().toXDR('base64'))
-        console.log('https://www.stellar.org/laboratory/#txsigner?xdr=' + encodeURIComponent(tx.toEnvelope().toXDR('base64')) + '&network=custom&horizonURL=https%3A%2F%2Fsudo38.com&networkPassphrase=Standalone%20Network%20%3B%20February%202017');
+        console.log('https://www.stellar.org/laboratory/#txsigner?xdr=' + encodeURIComponent(tx.toEnvelope().toXDR('base64')) + '&network=custom&horizonURL=https%3A%2F%2Fnetwork.hongrenlian.cn&networkPassphrase=Standalone%20Network%20%3B%20February%202017');
       }
       if (this.authType === 'secret') {
         this.account.signWithSecret(tx);

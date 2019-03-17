@@ -212,7 +212,7 @@ export default class OfferMaker extends React.Component {
         let maxOffer = targetBalance;
         if (targetAsset.isNative()) {
           maxOffer = this.props.d.session.account.maxLumenSpend();
-          youHave = <div className="OfferMaker__youHave">You may trade up to {maxOffer} XLM (due to <a href="#account">minimum balance requirements</a>).</div>;
+          youHave = <div className="OfferMaker__youHave">You may trade up to {maxOffer} CAR (due to <a href="#account">minimum balance requirements</a>).</div>;
         } else {
           youHave = <div className="OfferMaker__youHave">You have {targetBalance} {targetAsset.getCode()}</div>;
         }

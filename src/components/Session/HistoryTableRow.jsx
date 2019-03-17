@@ -270,9 +270,9 @@ export default class HistoryTableRow extends React.Component {
                   {
                     x.isAsset ?
                       (<span className="HistoryView__asset">
-                        {x.asset_code || "XLM"}-{x.domain}
+                        {x.asset_code || "CAR"}-{x.domain}
                         <div className="HistoryView__asset__card">
-                          <AssetCard2 code={x.asset_code || 'XLM'} issuer={x.asset_issuer || null}/>
+                          <AssetCard2 code={x.asset_code || 'CAR'} issuer={x.asset_issuer || null}/>
                         </div>
                       </span>)
                     : ""
@@ -283,7 +283,7 @@ export default class HistoryTableRow extends React.Component {
         <div className="HistoryView__external">
           View in external website:&nbsp;
           <a href={'https://stellar.expert/explorer/tx/' + d.transaction_hash} target="_blank" rel="nofollow noopener noreferrer">stellar.expert</a>&nbsp;
-          <a href={'https://sudo38.com/transactions/' + d.transaction_hash} target="_blank" rel="nofollow noopener noreferrer">Horizon</a>
+          <a href={'https://network.hongrenlian.cn/transactions/' + d.transaction_hash} target="_blank" rel="nofollow noopener noreferrer">Horizon</a>
         </div>
         <div className="HistoryView__external">
           Transaction ID: <strong>{d.transaction_hash}</strong>
