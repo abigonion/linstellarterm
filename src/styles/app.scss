@@ -3,7 +3,6 @@
 
 @import './solar-css/styles/index';
 @import './solar-stellarterm/styles/index';
-
 // @import 'node_modules/react-select/dist/react-select.min';
 
 html {
@@ -64,9 +63,6 @@ ul.privacy__ul {
   min-width: 300px;
   max-height: 330px;
   max-width: 330px;
-  background-image: url("https://github.com/abigonion/linstellarterm/blob/car/images/ban.png?raw=true");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 @import 'island';
 @import 'lightenZeros';

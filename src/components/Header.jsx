@@ -1,5 +1,5 @@
 const React = window.React = require('react');
-
+const images = require('../images');
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ export default class Header extends React.Component {
     return <div className="HeaderBackBack">
       {networkBar}
       <div className="so-back HeaderBack">
-        <div className="logo"></div>
+        <img className="logo" src={images['logo']}></img>
         <div className="so-chunk Header">
           <nav className="Header__nav" href="#">
             {/*<a className="Header__nav__item Header__nav__item--logo" href="#">首页</a>*/}

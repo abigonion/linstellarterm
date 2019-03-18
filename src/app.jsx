@@ -17,7 +17,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import TermsOfUse from './components/TermsOfUse.jsx';
 import Driver from './lib/Driver';
-
+const images = require('./images');
 let network = {
 //  horizonUrl: 'https://horizon.stellar.org',
   horizonUrl: 'https://network.hongrenlian.cn',
@@ -105,7 +105,7 @@ class TermApp extends React.Component {
      <div className="HomePage__black">
           <div className="so-back">
             {/*<OpenUp />*/}
-            <div className="banner__logo"></div>
+            <div><img src={images['ban']} className="banner__logo"></img></div>
             <div className="HomePage__lead">
               <h2 className="HomePage__lead__title">易车库<a href="#exchange"></a></h2>
               <p className="HomePage__lead__summary">中国车位产权数字交易管理平台</p>

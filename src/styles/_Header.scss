@@ -27,12 +27,10 @@
 .logo{
   margin-top: 15px;
   margin-left: 10%;
-  height: 44px;
-  width: 180px;
+  height: 40px;
+  width: 170px;
   display: flex;
   flex-direction:row;
-  background-image: url("https://github.com/abigonion/linstellarterm/blob/car/images/logo.png?raw=true");
-  background-repeat: no-repeat;
 }
 .Header:after {
   display: none;
