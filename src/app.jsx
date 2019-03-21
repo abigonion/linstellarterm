@@ -179,7 +179,7 @@ class TermApp extends React.Component {
         try {
           let baseBuying = Stellarify.parseAssetSlug(urlParts[1]);
           let counterSelling = Stellarify.parseAssetSlug(urlParts[2]);
-          console.dir(counterSelling);
+          console.dir(baseBuying);
           this.d.orderbook.handlers.setOrderbook(baseBuying, counterSelling);
           body = <Exchange d={this.d}></Exchange>
         } catch (e) {

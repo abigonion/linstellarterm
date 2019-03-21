@@ -300,7 +300,7 @@ const MagicSpoon = {
         depth += 1;
         let tradeResults;
         if (first) {
-          tradeResults = await Server.tradeAggregation(baseBuying, counterSelling, 1514764800, Date.now() + 86400000, 900000).limit(200).order('desc').call()
+          tradeResults = await Server.tradeAggregation(baseBuying, counterSelling, 1551764800, Date.now() + 86400000, 900000).limit(200).order('desc').call()
           // tradeResults = await Server.trades().forAssetPair(baseBuying, counterSelling).limit(200).order('desc').call()
           first = false;
         } else {
@@ -312,7 +312,6 @@ const MagicSpoon = {
           satisfied = true;
         }
         Array.prototype.push.apply(records, tradeResults.records);
-
         // Optimization: use this filter before saving it into the records array
         result = _.filter(
           _.map(records, (trade) => {

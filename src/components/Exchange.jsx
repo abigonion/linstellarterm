@@ -100,14 +100,14 @@ export default class Exchange extends React.Component {
           </div>
         </div>
       </div>
-      {/*<div className="so-back islandBack">*/}
-        {/*<div className="island">*/}
-          {/*<div className="island__header">*/}
-            {/*Manage offers*/}
-          {/*</div>*/}
-          {/*<ManageOffers d={this.props.d}></ManageOffers>*/}
-        {/*</div>*/}
-      {/*</div>*/}
+      <div className="so-back islandBack">
+        <div className="island">
+          <div className="island__header">
+            挂单管理
+          </div>
+          <ManageOffers d={this.props.d}></ManageOffers>
+        </div>
+      </div>
     </div>
   }
 }

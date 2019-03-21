@@ -57,7 +57,7 @@ export default class ManageOffers extends React.Component {
       <div className="ManageOffers">
         <div className=" island__sub">
           <div className=" island__sub__division">
-            <h3 className="island__sub__division__title">Your buy offers</h3>
+            <h3 className="island__sub__division__title">你的买单</h3>
             <table className="ManageOffers__table">
               <tbody>
                 <tr className="ManageOffers__table__header">
@@ -71,7 +71,7 @@ export default class ManageOffers extends React.Component {
             </table>
           </div>
           <div className="island__sub__division">
-            <h3 className="island__sub__division__title">Your sell offers</h3>
+            <h3 className="island__sub__division__title">你的卖单</h3>
             <table className="ManageOffers__table">
               <tbody>
                 <tr className="ManageOffers__table__header">
