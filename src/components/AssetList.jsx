@@ -29,6 +29,7 @@ export default class AssetList extends React.Component {
         return;
       }
       let directoryAsset = directory.getAssetByAccountId(asset.code, asset.issuer);
+      console.dir(directoryAsset);
       if (directoryAsset === null || directoryAsset.unlisted) {
         // Don't show unlisted assets
         return;
@@ -37,7 +38,7 @@ export default class AssetList extends React.Component {
       let priceXLM = asset.price_XLM ? Printify.lightenZeros(asset.price_XLM.toString(), Format.niceNumDecimals(asset.price_XLM)): '-';
       let priceUSD = asset.price_USD ? <span>${Printify.lightenZeros(asset.price_USD.toString(), Format.niceNumDecimals(asset.price_USD))}</span> : '-';
       if (asset.id == 'CAR-native') {
-        priceXLM = Printify.lightenZeros('2.0000000');
+        priceXLM = Printify.lightenZeros('1.0000000');
       }
       let tradeLink;
       if (asset.topTradePairSlug) {
@@ -74,11 +75,11 @@ export default class AssetList extends React.Component {
     return (
       <div className="AssetList">
         <div className="AssetList__head__row">
-          <div className="AssetList__head__cell AssetList__head__asset">Asset</div>
-          <div className="AssetList__head__cell AssetList__head__amount">Price (CAR)</div>
-          <div className="AssetList__head__cell AssetList__head__amount">Price (USD)</div>
-          <div className="AssetList__head__cell AssetList__head__amount">Volume (24h)</div>
-          <div className="AssetList__head__cell AssetList__head__amount">Change (24h)</div>
+          <div className="AssetList__head__cell AssetList__head__asset">影视作品</div>
+          <div className="AssetList__head__cell AssetList__head__amount">价格 (CAR)</div>
+          <div className="AssetList__head__cell AssetList__head__amount">价格 (USD)</div>
+          <div className="AssetList__head__cell AssetList__head__amount">交易总量 (24h)</div>
+          <div className="AssetList__head__cell AssetList__head__amount">涨幅 (24h)</div>
         </div>
         {rows}
       </div>

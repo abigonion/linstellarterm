@@ -102,13 +102,15 @@ class TermApp extends React.Component {
     if (url === '') {
       // Home page
       body = <div>
-     <div className="HomePage__black">
+     <div className="HomePage__black" >
+       <img src={images['bg']} className="Homepage_bg"></img>
           <div className="so-back">
             {/*<OpenUp />*/}
-            <div><img src={images['ban']} className="banner__logo"></img></div>
+            {/*<div><img src={images['banner__logoner']} className="banner__logo"></img></div>*/}
+            {/*<div className="hero"><div className="video-container"><video autoPlay loop muted className="video-one"><source src="https://videos.ctfassets.net/r1dr6vzfxhev/14T7rciXwissEqmO8cMkSk/314354850e19785f9e7fbb3c0bc88c80/iota-homepage-final.m4v" type="video/mp4"/></video></div></div>*/}
             <div className="HomePage__lead">
-              <h2 className="HomePage__lead__title">易车库<a href="#exchange"></a></h2>
-              <p className="HomePage__lead__summary">中国车位产权数字交易管理平台</p>
+              <h2 className="HomePage__lead__title">影视投<a href="#exchange"></a></h2>
+              <p className="HomePage__lead__summary">影视产权数字化交易管理平台</p>
               {this.renderHomePageActions()}
             </div>
           </div>

@@ -28,10 +28,9 @@
   display: block;
 }
 .LoginPage__sidebar__tab.is-active {
-  background: #6dc6ff;
+  background: #e0a521;
   font-weight: bold;
   color: #fff;
-  border-color: #1b65d5;
 }
 .LoginPage__sidebar__tab.is-active img.LoginPage__sidebar__tab__img--invertible {
   filter: brightness(100);
@@ -44,8 +43,8 @@
   flex: 1;
 }
 .LoginPage__greenBox {
-  border: 1px solid #6dc6ff;
-  background: #f0f3fb;
+  border: 1px solid #919191;
+  background: #fff6e3;
   border-radius: $s-var-radius;
   margin: 16px 18px;
 }
@@ -90,7 +89,7 @@
   border-bottom-left-radius: 0;
 }
 .LoginPage__notes {
-  border-top: 1px solid #6dc6ff;
+  border-top: 1px solid #e0a521;
   padding: 20px;
 }
 
@@ -115,7 +114,7 @@
   align-items: center;
   padding: 8px 12px;
   // background: rgba(0,0,0,0.05);
-  background: #6dc6ff;
+  background: #e0a521;
   border-radius: 3px;
   margin-bottom: 10px;
 }

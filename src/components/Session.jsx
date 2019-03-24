@@ -64,7 +64,7 @@ class Session extends React.Component {
         }
         return <div>
           <Generic>
-            <h2 className="Session__welcomeTitle">欢迎来到易车库数字资产交易平台</h2>
+            <h2 className="Session__welcomeTitle">欢迎来到影视投数字资产交易平台</h2>
             <p>请确保您已安全备份密钥。 切勿与任何人分享您的密钥或恢复短语。</p>
             <div className="Generic__divider"></div>
             <div className="Session__inflation">

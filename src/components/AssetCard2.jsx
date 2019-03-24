@@ -30,6 +30,7 @@ export default class AssetCard2 extends React.Component {
     }
 
     let asset = {};
+    //props.传入两个资产的code和issuer
     if (this.props.code === 'CAR' && this.props.domain === undefined && this.props.issuer === undefined) {
       asset = directory.nativeAsset;
     } else {

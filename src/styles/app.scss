@@ -11,7 +11,7 @@ html {
 }
 body {
   //background: linear-gradient(0deg,#ced0ff,#c0ecff); //#1b65d5
-  background:linear-gradient(to bottom right, #1b65d5 70%, transparent 70.1%);
+  background:linear-gradient(to bottom right, #070b0a 70%, transparent 70.1%);
   color: $s-color-neutral3;
   font-size: $s-scale-4;
   min-width: 1052px;
@@ -46,23 +46,22 @@ ul.privacy__ul {
 }
 //重写button
 .s-button{
-  background: #eb6460;
-  border: 1px solid #c80600;
+  background: #e0a521;
+  border: 1px solid #e0a521;
 
 }
 .s-button:hover {
-  border: 1px solid #eb6460;
-  background: #eb6460;
+  border: 1px solid #e0a521;
+  background: #e0a521;
 }
 .banner__logo{
-  display: flex;
-  margin-top: 30px;
-  margin-right: 30%;
-  float: right;
-  min-height: 300px;
-  min-width: 300px;
-  max-height: 330px;
-  max-width: 330px;
+  position: absolute;
+  right: 400px;
+  height: 541px;
+  width: 610px;
+}
+.so-back{
+  position: relative;
 }
 @import 'island';
 @import 'lightenZeros';
