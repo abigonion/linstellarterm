@@ -221,7 +221,7 @@ export default class Send extends React.Component {
         let maxLumenSpend = d.session.account.maxLumenSpend();
         let yourBalance;
         if (amountValid === false) {
-          amountValidationMessage = <p>Amount is invalid</p>
+          amountValidationMessage = <p>账户是无效的</p>
         } else if (d.send.step2.availability.asset !== null) {
           let targetBalance = d.session.account.getBalance(new StellarSdk.Asset(d.send.step2.availability.asset.code, d.send.step2.availability.asset.issuer));
           if (targetBalance !== null) {
@@ -231,26 +231,26 @@ export default class Send extends React.Component {
           if (d.send.step2.availability.asset.code === 'XLM' && d.send.step2.availability.asset.issuer === undefined) {
             if (Number(d.send.step3.amount) > Number(d.session.account.maxLumenSpend())) {
               amountValid = false;
-              amountValidationMessage = <p>You may only send up to <strong>{maxLumenSpend} lumens</strong> due to the minimum balance requirements. For more information, see the <a href="#account">minimum balance tool</a>.</p>
+              amountValidationMessage = <p>You may only send up to <strong>{maxLumenSpend} CAR</strong> due to the minimum balance requirements. For more information, see the <a href="#account">minimum balance tool</a>.</p>
             }
           }
         }
         Step3Content = <div className="Send__content">
           <label className="s-inputGroup Send__input">
             <span className="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4">
-              <span>Amount</span>
+              <span>账户</span>
             </span>
             <input className="s-inputGroup__item S-flexItem-share" type="text" value={d.send.step3.amount} onChange={d.send.handlers.updateAmount} placeholder="" />
           </label>
           {yourBalance}
           {amountValidationMessage}
           <div className="Send__panel__next">
-            <button className="s-button" disabled={!amountValid} onClick={d.send.handlers.step3Next}>Save and continue</button>
+            <button className="s-button" disabled={!amountValid} onClick={d.send.handlers.step3Next}>保存并继续</button>
           </div>
         </div>
       } else if (step > 3) {
         Step3Content = <div className="Send__content Send__overview">
-          <p className="Send__overviewLine">Amount: <strong>{d.send.step3.amount} {d.send.step2.availability.asset.getCode()}</strong></p>
+          <p className="Send__overviewLine">账户: <strong>{d.send.step3.amount} {d.send.step2.availability.asset.getCode()}</strong></p>
         </div>
       }
       let Step3 = <div className={step3ClassName}>

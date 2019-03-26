@@ -13,7 +13,7 @@ export default class ManageOffers extends React.Component {
   }
   render() {
     if (this.props.d.session.state !== 'in') {
-      return <div className="island__paddedContent"><a href="#account">Log in</a> to see your open offers</div>;
+      return <div className="island__paddedContent"><a href="#account">登陆</a>查看你的挂单</div>;
     }
     let orderbook = this.props.d.orderbook.data;
 
@@ -47,10 +47,10 @@ export default class ManageOffers extends React.Component {
     });
 
     if (buyItems.length === 0) {
-      buyItems = <tr><td className="ManageOffers__table__row__none" colSpan="4">You have no buy offers for this orderbook.</td></tr>;
+      buyItems = <tr><td className="ManageOffers__table__row__none" colSpan="4">这个交易对你没有买单</td></tr>;
     }
     if (sellItems.length === 0) {
-      sellItems = <tr><td className="ManageOffers__table__row__none" colSpan="4">You have no sell offers for this orderbook.</td></tr>;
+      sellItems = <tr><td className="ManageOffers__table__row__none" colSpan="4">这个交易对你没有卖单</td></tr>;
     }
 
     return <div className="island--pb">
@@ -64,7 +64,7 @@ export default class ManageOffers extends React.Component {
                   <td></td>
                   <td className="ManageOffers__table__header__item">{orderbook.counterSelling.getCode()}</td>
                   <td className="ManageOffers__table__header__item">{orderbook.baseBuying.getCode()}</td>
-                  <td className="ManageOffers__table__header__item">Price</td>
+                  <td className="ManageOffers__table__header__item">价格</td>
                 </tr>
                 {buyItems}
               </tbody>
@@ -75,7 +75,7 @@ export default class ManageOffers extends React.Component {
             <table className="ManageOffers__table">
               <tbody>
                 <tr className="ManageOffers__table__header">
-                  <td className="ManageOffers__table__header__item">Price</td>
+                  <td className="ManageOffers__table__header__item">价格</td>
                   <td className="ManageOffers__table__header__item">{orderbook.baseBuying.getCode()}</td>
                   <td className="ManageOffers__table__header__item">{orderbook.counterSelling.getCode()}</td>
                   <td></td>
