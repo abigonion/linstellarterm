@@ -2,7 +2,7 @@ node_modules/
 dist/
 .sass-cache/
 src/images.js
-
+noghup
 npm-debug.log
 package-lock.json
 

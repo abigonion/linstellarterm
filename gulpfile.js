@@ -154,6 +154,7 @@ const baseTasks = ['html', 'styles', 'customConfig', 'buildInfo', 'images', 'scr
 // Watch
 gulp.task('watch', baseTasks, () => {
   browserSync({
+    ghostMode: false,
     notify: false,
     logPrefix: 'BS',
     server: ['dist'],
