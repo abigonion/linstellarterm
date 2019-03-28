@@ -214,7 +214,7 @@ export default class OfferMaker extends React.Component {
           maxOffer = this.props.d.session.account.maxLumenSpend();
           youHave = <div className="OfferMaker__youHave">你能够交易{maxOffer} CAR (在于<a href="#account">你账户的最低额度</a>).</div>;
         } else {
-          youHave = <div className="OfferMaker__youHave">You have {targetBalance} {targetAsset.getCode()}</div>;
+          youHave = <div className="OfferMaker__youHave">你有 {targetBalance} {targetAsset.getCode()}</div>;
         }
         if (Number(inputSpendAmount) > Number(maxOffer)) {
           insufficientBalanceMessage = <p className="OfferMaker__insufficientBalance">错误: 你没有足够的{targetAsset.getCode()}创建订单.</p>;
