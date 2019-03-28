@@ -195,7 +195,7 @@ class TermApp extends React.Component {
               url: newUrl,
             })
           }, 0);
-          body = <Generic title="Loading orderbook">Loading</Generic>
+          body = <Generic title="载入交易信息">载入中</Generic>
         } else {
           // Default to a market with good activity
           let baseBuying = new StellarSdk.Asset('Syanta', 'GCTI6HMWRH2QGMFKWVU5M5ZSOTKL7P7JAHZDMJJBKDHGWTEC4CJ7O3DU');

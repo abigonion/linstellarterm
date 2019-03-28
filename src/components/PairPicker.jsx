@@ -65,7 +65,7 @@ export default class PairPicker extends React.Component {
       <div className="island">
         {main}
         <a href="#markets" className="PairPicker__auxInfo">
-          <span>See other trading pairs</span>
+          <span>查看其他交易对</span>
         </a>
       </div>
     );

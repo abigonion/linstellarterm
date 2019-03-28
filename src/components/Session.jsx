@@ -55,7 +55,7 @@ class Session extends React.Component {
         要使用您的帐户，您必须通过向您的帐户发送至少5个币来激活它。 您可以从交易所购买将其发送到您的地址。
       </Loading></Generic>
     } else if (state === 'loading') {
-      return <Generic title="Loading account"><Loading>连接网络并加载账户<Ellipsis /></Loading></Generic>
+      return <Generic title="载入账号"><Loading>连接网络并加载账户<Ellipsis /></Loading></Generic>
     } else if (state === 'in') {
       if (!d.session.inflationDone) {
         let currentVoteNote = '';

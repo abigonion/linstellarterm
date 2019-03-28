@@ -23,7 +23,7 @@ export default class Exchange extends React.Component {
   render() {
 
     if (!this.props.d.orderbook.data.ready) {
-      return <Generic title="Loading orderbook">从Horizon中加载交易数据<Ellipsis /></Generic>
+      return <Generic title="载入交易数据">从Horizon中加载交易数据<Ellipsis /></Generic>
     }
 
     let thinOrderbookWarning;

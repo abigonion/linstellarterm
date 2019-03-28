@@ -164,7 +164,7 @@ export default class OfferMaker extends React.Component {
   }
   render() {
     if (!this.props.d.orderbook.data.ready) {
-      return <div>Loading</div>;
+      return <div>载入中</div>;
     }
 
     let capitalizedSide = 'Buy';
@@ -180,9 +180,9 @@ export default class OfferMaker extends React.Component {
 
     let title;
     if (this.props.side === 'buy') {
-      title = `Buy ${baseAssetName} using ${counterAssetName}`;
+      title = `使用${counterAssetName} 买${baseAssetName}`;
     } else {
-      title = `Sell ${baseAssetName} for ${counterAssetName}`;
+      title = `使用${baseAssetName}卖${counterAssetName} `;
     }
 
     let youHave;
@@ -212,16 +212,16 @@ export default class OfferMaker extends React.Component {
         let maxOffer = targetBalance;
         if (targetAsset.isNative()) {
           maxOffer = this.props.d.session.account.maxLumenSpend();
-          youHave = <div className="OfferMaker__youHave">You may trade up to {maxOffer} CAR (due to <a href="#account">minimum balance requirements</a>).</div>;
+          youHave = <div className="OfferMaker__youHave">你能够交易 {maxOffer} CAR (在于 <a href="#account">你账户的最低额度</a>).</div>;
         } else {
-          youHave = <div className="OfferMaker__youHave">You have {targetBalance} {targetAsset.getCode()}</div>;
+          youHave = <div className="OfferMaker__youHave">你有 {targetBalance} {targetAsset.getCode()}</div>;
         }
         if (Number(inputSpendAmount) > Number(maxOffer)) {
-          insufficientBalanceMessage = <p className="OfferMaker__insufficientBalance">Error: You do not have enough {targetAsset.getCode()} to create this offer.</p>;
+          insufficientBalanceMessage = <p className="OfferMaker__insufficientBalance">错误: 你没有足够的{targetAsset.getCode()} 创建订单.</p>;
         }
       } else {
         youHave = <div>
-          <p className="OfferMaker__youHave">Must <a href="#account/addTrust">accept the asset {targetAsset.getCode()}</a> to trade</p>
+          <p className="OfferMaker__youHave">必须 <a href="#account/addTrust">接受 {targetAsset.getCode()}</a>资产</p>
 
         </div>
       }
@@ -235,7 +235,7 @@ export default class OfferMaker extends React.Component {
           submit = <input type="submit" className="s-button" value={capitalizedSide + ' ' + baseAssetName} disabled={!this.state.valid || insufficientBalanceMessage}></input>
         } else {
           submit = <input type="submit" className="s-button" value="Action required: accept asset" disabled={true}></input>
-          acccept = <div>To fix this issue, go to the <a href="#account/addTrust">account page and accept the assetts</a> in this orderbook.</div>
+          acccept = <div>要解决此问题，请转到<a href="#account/addTrust">账户页面并接受</a>这个资产.</div>
         }
       } else {
         submit = <input type="submit" className="s-button" disabled={true} value="Creating offer..." disabled={true}></input>
@@ -268,12 +268,12 @@ export default class OfferMaker extends React.Component {
         </div>;
       } else if (this.state.errorType === 'tx_bad_seq') {
         error = <div className="s-alert s-alert--alert OfferMaker__message">
-          Transaction failed because sequence got out of sync. Please reload StellarTerm and try again.
+          事务失败，因为序列不同步。 请重新加载并重试。
         </div>;
       } else {
-        error = <div className="s-alert s-alert--alert OfferMaker__message">Failed to create offer.
+        error = <div className="s-alert s-alert--alert OfferMaker__message">无法去创建订单
           <ul className="OfferMaker__errorList">
-            <li>Error code: {this.state.errorType}</li>
+            <li>错误代码: {this.state.errorType}</li>
           </ul>
         </div>;
       }
@@ -288,7 +288,7 @@ export default class OfferMaker extends React.Component {
 
     if (this.props.d.session.state === 'in' && !hasAllTrust) {
       overview = <div>
-        <p className="OfferMaker__enable">To trade, activate these assets on your account:</p>
+        <p className="OfferMaker__enable">要进行交易，请在您的帐户中激活这些资产:</p>
         {trustNeededAssets.map((asset, index) => {
           return <TrustButton
             key={asset.getCode() + '-' + asset.getIssuer()}
@@ -317,7 +317,7 @@ export default class OfferMaker extends React.Component {
         <table className="OfferMaker__table">
           <tbody>
             <tr className="OfferMaker__table__row">
-              <td className="OfferMaker__table__label">Price</td>
+              <td className="OfferMaker__table__label">价格</td>
               <td className="OfferMaker__table__input">
                 <label className="OfferMaker__table__input__group">
                   <input type="text" className="OfferMaker__table__input__input" value={this.state.price} onChange={(e) => this.updateState('price', e.target.value)} placeholder="" />
@@ -328,7 +328,7 @@ export default class OfferMaker extends React.Component {
               </td>
             </tr>
             <tr className="OfferMaker__table__row">
-              <td className="OfferMaker__table__label">Amount</td>
+              <td className="OfferMaker__table__label">数量</td>
               <td className="OfferMaker__table__input">
                 <label className="OfferMaker__table__input__group">
                   <input type="text" className="OfferMaker__table__input__input" value={this.state.amount} onChange={(e) => this.updateState('amount', e.target.value)} placeholder="" />
@@ -339,7 +339,7 @@ export default class OfferMaker extends React.Component {
               </td>
             </tr>
             <tr className="OfferMaker__table__row">
-              <td className="OfferMaker__table__label">Total</td>
+              <td className="OfferMaker__table__label">总数</td>
               <td className="OfferMaker__table__input">
                 <label className="OfferMaker__table__input__group">
                   <input type="text" className="OfferMaker__table__input__input" value={this.state.total} onChange={(e) => this.updateState('total', e.target.value)} placeholder="" />
