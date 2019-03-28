@@ -180,9 +180,9 @@ export default class OfferMaker extends React.Component {
 
     let title;
     if (this.props.side === 'buy') {
-      title = `Buy ${baseAssetName} using ${counterAssetName}`;
+      title = `  用${counterAssetName} 买成${baseAssetName}`;
     } else {
-      title = `Sell ${baseAssetName} for ${counterAssetName}`;
+      title = `用${counterAssetName}卖成 ${baseAssetName}`;
     }
 
     let youHave;
